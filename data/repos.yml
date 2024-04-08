@@ -1,0 +1,139 @@
+- repo_name: trade-tariff-backend
+  type: APIs
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-testing
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-frontend
+  type: Frontend
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-platform-aws-terraform
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-admin
+  type: Frontend
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-tech-docs
+  type: Frontend
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-dev-hub-backend
+  type: APIs
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-lambdas-dev-hub-backups
+  type: Lambdas
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-duty-calculator
+  type: Frontend
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-dev-hub-frontend
+  type: Frontend
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-search-query-parser
+  type: APIs
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-platform-terraform-modules
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: process-appendix-5a
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-tools
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-api-docs
+  type: APIs
+  team: "#trade-tariff-write"
+
+- repo_name: electronic-tariff-file
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-ci-orb
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-lambdas-database-backups
+  type: Lambdas
+  team: "#trade-tariff-write"
+
+- repo_name: routing-filter
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: download-CDS-files
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: uktt
+  type: APIs
+  team: "#trade-tariff-write"
+
+- repo_name: rules-of-origin-builder-uk
+  type: Frontend
+  team: "#trade-tariff-write"
+
+- repo_name: ott-prototype
+  type: Frontend
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-performance-testing
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-reporting
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-lambdas-appendix5a
+  type: Lambdas
+  team: "#trade-tariff-write"
+
+- repo_name: preference-utilisation-analysis
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-cloudwatch-synthetics-canaries
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: basic-python-tariff-query
+  type: APIs
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-lambdas-uk-issues-mailer
+  type: Lambdas
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-lambdas-xi-certificate-update-mailer
+  type: Lambdas
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-lambdas-electronic-tariff-file-rotations
+  type: Lambdas
+  team: "#trade-tariff-write"
+
+- repo_name: deliverables-report-writer
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-lambdas-uk-daily-file-mailer
+  type: Lambdas
+  team: "#trade-tariff-write"
+
+- repo_name: rules-of-origin-builder-xi
+  type: Frontend
+  team: "#trade-tariff-write"

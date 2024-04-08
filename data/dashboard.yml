@@ -1,0 +1,30 @@
+- name: Joining OTT
+  sections:
+    - name: Get started
+      sites:
+        - name: Get started developing on OTT
+          url: /manual/get-started.html
+    - name: Slack channels
+      sites:
+        - name: "#ott-core"
+          url: https://future-borders.slack.com/archives/C01DXUP15M5
+          description: For all OTT core developers
+        - name: "#windsor-framework-fpo"
+          url: https://future-borders.slack.com/archives/C05CW3FGV1Q
+          description: Where the Windsor Framework Fast Parcel Operator team hangout
+        - name: "#windsor-framework-green-lanes"
+          url: https://future-borders.slack.com/archives/C05EPR6BRT2
+          description: Where the Windsor Framework Green Lane team hangout
+
+- name: Main navigation
+  sections:
+    - name: OTT codebases
+      sites:
+        - name: Repositories
+          url: /repos.html
+          description: All the applications and other repositories we use to build OTT.
+    - name: OTT manuals
+      sites:
+        - name: Developer manuals
+          url: /manual.html
+          description: The contents page of OTT's developer manuals.

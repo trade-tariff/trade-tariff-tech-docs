@@ -1,0 +1,32 @@
+<% breadcrumb = capture do %>
+  <%= GovukPublishingComponents.render("govuk_publishing_components/components/breadcrumbs", {
+    breadcrumbs: [
+      {
+        title: "Home",
+        url: "/",
+      },
+      {
+        title: current_page.data.section,
+        url: "/manual.html##{section_url}",
+      },
+    ]
+  }) %>
+<% end %>
+
+<% last_updated_banner = capture do %>
+  <%= partial 'partials/last_updated' %>
+<% end %>
+
+<% html = "#{breadcrumb} #{last_updated_banner} <h1 id='header'>#{current_page.data.title}</h1> #{yield}" %>
+
+<% content_for :page_description, Snippet.generate(html) %>
+
+<% content_for :sidebar do %>
+  <a href='/manual.html' class="toc__back-link govuk-link">&lsaquo; Manual</a>
+  <%= single_page_table_of_contents html, max_level: 3 %>
+<% end %>
+
+<% wrap_layout :core do %>
+  <%= html %>
+  <%= partial 'partials/related_content' %>
+<% end %>

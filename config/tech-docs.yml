@@ -1,0 +1,22 @@
+host: https://docs.trade-tariff.service.gov.uk
+service_link: /
+enable_search: true
+
+show_govuk_logo: true
+service_name: OTT Developer docs
+full_service_name: Online Trade Tariff Developer Documentation
+description: Technical documentation for developers working on the Online Trade Tariff inside of HMRC
+
+# Suppress review banner in favour of bespoke 'Last updated' banner
+show_review_banner: false
+
+header_links:
+  Get started: /manual/get-started.html
+  Manual: /manual.html
+  Repos: /repos.html
+
+footer_links:
+  Accessibility: /accessibility.html
+
+show_contribution_banner: true
+github_repo: trade-tariff/trade-tariff-tech-docs

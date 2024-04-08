@@ -1,0 +1,149 @@
+@import "govuk_tech_docs";
+@import "govuk_publishing_components/components/_summary-list";
+@import "govuk_publishing_components/components/_breadcrumbs";
+@import "govuk_publishing_components/components/_cookie-banner";
+@import "govuk_publishing_components/components/_button";
+@import "govuk_publishing_components/components/_fieldset";
+@import "govuk_publishing_components/components/_heading";
+@import "govuk_publishing_components/components/_input";
+@import "govuk_publishing_components/components/_radio";
+@import "govuk_publishing_components/components/_success-alert";
+@import "govuk_publishing_components/components/_tabs";
+
+.gem-c-summary-list {
+  border-bottom: 0; /* We have an extra border-bottom for some reason */
+}
+
+.information-callout {
+  padding: govuk-spacing(6);
+  margin-top: govuk-spacing(6);
+  margin-bottom: govuk-spacing(6);
+  background-color: $govuk-brand-colour;
+  color: govuk-colour("white");
+
+  a:link,
+  a:visited {
+    color: inherit;
+  }
+
+  a:hover {
+    color: $govuk-link-hover-colour;
+  }
+
+  a:active {
+    color: $govuk-link-active-colour;
+  }
+}
+
+.technical-documentation.full-width {
+  max-width: 1024px;
+}
+
+.technical-documentation {
+  .entry-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .entry-list__item {
+    margin-top: 0;
+    margin-bottom: govuk-spacing(3);
+  }
+  .entry-list__key {
+    display: block;
+  }
+  @include govuk-media-query(tablet) {
+    .entry-list {
+      display: table;
+    }
+    .entry-list__item {
+      display: table-row;
+    }
+    .entry-list__key,
+    .entry-list__value {
+      display: table-cell;
+    }
+    .entry-list__key {
+      width: 1%;
+      white-space: nowrap;
+    }
+    .entry-list__value {
+      width: 100%;
+      padding-left: govuk-spacing(6);
+    }
+  }
+}
+
+.related-content {
+  border-top: 1px solid #090909;
+  margin-top: 40px;
+}
+
+.toc__back-link {
+  display: inline-block;
+  margin: govuk-spacing(1) 0 govuk-spacing(2) govuk-spacing(1);
+}
+
+.technical-documentation > p:first-child {
+  margin: govuk-spacing(3) 0 0 0;
+}
+
+.subdir__heading {
+  padding: 8px 30px 8px 0;
+}
+
+/* high specificity required, otherwise overwritten by `.toc ul` */
+ul.subdir__menu {
+  padding-left: 20px;
+}
+
+.indented-list {
+  margin: 0 0 0 20px;
+}
+
+.analytics-heading {
+  text-transform: capitalize;
+}
+
+.cookie-js-info {
+  display: none;
+}
+
+.js-enabled {
+  .cookie-js-info {
+    display: block;
+  }
+  .cookie-nojs-info {
+    display: none;
+  }
+}
+
+.cookie-settings__confirmation {
+  display: none;
+}
+
+.architecture-diagram {
+  // https://github.com/alphagov/tech-docs-gem/blob/main/lib/assets/stylesheets/modules/_app-pane.scss#L2
+  $toc-width: 330px;
+
+  height: 700px;
+  width: calc(100vw - #{$toc-width} - #{$govuk-gutter} * 2);
+  @include govuk-media-query($until: tablet) {
+    width: calc(100vw - #{$govuk-gutter} * 2);
+  }
+}
+
+.filter-form {
+  display: none;
+
+  .js-enabled & {
+    display: block;
+  }
+}
+
+.filter-list-hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
