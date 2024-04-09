@@ -4,7 +4,7 @@ require_relative "../../helpers/commit_helpers"
 RSpec.describe CommitHelpers do
   let(:helper) { Class.new { extend CommitHelpers } }
   let(:uncommitted_file) do
-    path_to_file = "config.rb"
+    path_to_file = "tmp/.gitignore"
     File.write(path_to_file, "new uncommitted file")
     path_to_file
   end

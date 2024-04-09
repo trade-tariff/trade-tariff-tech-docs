@@ -48,11 +48,11 @@ Example of the output:
 * db-parameter-group-name = local-links-manager-postgres-XXXXXXXXXX
 * db-subnet-group-name = blue-govuk-rds-subnet
 
-Now export the result
+Now export the result:
 
 ```sh
 DB_SUBNET_GROUP_NAME="<replace_with_previous_output>"
-VPC_SECURITY_GROUP_ID="<replace_with_previous_output>"
+VPC_SECURITY_GROUP_ID="<replace_with_previous_output>" # A comma-separated list of sg ids
 DB_PARAMETER_GROUP_NAME="<replace_with_previous_output>"
 ```
 
@@ -67,7 +67,7 @@ SNAPSHOT_IDENTIFIER="<replace_with_previous_output>"
 
 ### 3. Restore the database instance from a snapshot
 
-< The restored database must have the same security groups and be in the same VPC (that's the "subnet group name" parameter) as the original one, otherwise, apps won't be able to connect to it. Therefore the database needs to be restored in the same VPC and with the same security groups as the original instance the snapshot came from.
+> The restored database must have the same security groups and be in the same VPC (that's the "subnet group name" parameter) as the original one, otherwise, apps won't be able to connect to it. Therefore the database needs to be restored in the same VPC and with the same security groups as the original instance the snapshot came from.
 
 Using the stored variables from the previous steps:
 
@@ -75,7 +75,8 @@ Using the stored variables from the previous steps:
 aws rds restore-db-instance-from-db-snapshot \
   --db-subnet-group-name $DB_SUBNET_GROUP_NAME \
   --db-instance-identifier restored-$DATABASE_ID \
-  --db-snapshot-identifier $SNAPSHOT_ARN
+  --db-snapshot-identifier $SNAPSHOT_ARN \
+  --vpc-security-group-ids $VPC_SECURITY_GROUP_ID
 ```
 
 To see the newly created database instance, log into AWS Console > RDS > Databases > filter for your database name. You should see the original and newly created one.
@@ -90,19 +91,17 @@ aws rds wait db-instance-available --db-instance-identifier restored-${DATABASE_
 
 This command will wait until the database is ready, and then exit without any output.
 
-### 6. Get the new database's hostname
+### 5. Get the new database's hostname
 
-Once the database is ready, update the value of the SSM parameter
+Make a note of the new endpoint address:
 
 ```sh
 aws rds describe-db-instances \
-  --db-instance-identifier "restored-${db_instance_identifier?}" \
+  --db-instance-identifier "restored-${DATABASE_ID}" \
   --query 'DBInstances[].Endpoint.Address'
 ```
 
-Make a note of this.
-
-### 7. Update the existing secrets manager secret value
+### 6. Update the existing secrets manager secret value
 
 This requires updating the existing secrets manager secret for the database you've just restored
 
@@ -110,17 +109,16 @@ This requires updating the existing secrets manager secret for the database you'
 1. In AWS Secrets Manager, search for and click on the relevant secret
 1. Under the "Overview" tab, in the "Secret Value" section, select "Retrieve Secret Value".
 1. Make a note of the existing value, in case you need to revert the changes (for example, if performing a drill).
-1. Click "Edit", and replace the value of the "host" and "dbInstanceIdentifier" fields with the URL and identifier of the new database instance. Click "Save".
+1. Click "Edit", and replace the value of the `host` and `dbInstanceIdentifier` fields with the URL and identifier of the new database instance. Click "Save".
 
-### 8. Redeploy the affected ECS applications
+### 7. Redeploy the affected ECS applications
 
-> The execution role in ECS passes secret values to a new revision of the application. This process is triggered by a standard deploymen using terraform with a new docker image.
+> The execution role in ECS passes secret values to a new revision of the application. This process is triggered by a standard deployment using terraform with a new docker image.
 
 1. Open an empty PR you want to cut a release for
 1. Seek approval to merge this PR (for `staging` and `production` releases)
 1. Manually gated production releases will need to be approved after the staging workflow has completed
 
-You'll want to keep an eye on the `#tariff-alerts` channel and validate the application is still running using your usual process
+You'll want to keep an eye on the `#tariff-alerts` channel and validate the application is still running using your usual process.
 
 [lambda-backups]: https://github.com/trade-tariff/trade-tariff-lambdas-database-backups
-
