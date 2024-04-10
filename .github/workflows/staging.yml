@@ -1,10 +1,10 @@
-name: development
+name: staging
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
+  workflow_run:
+    workflows: [development]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
     inputs:
       ref:
@@ -13,24 +13,10 @@ on:
         type: string
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ inputs.ref || github.ref }}
-          show-progress: false
-      - uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
-      - run: bundle exec rake
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SKIP_PROXY_PAGES: true
   deploy:
     runs-on: ubuntu-latest
-    environment: development
-    needs: test
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    environment: production
     steps:
       - uses: actions/checkout@v3
         with:
@@ -56,4 +42,3 @@ jobs:
           ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
 
           aws s3 cp --recursive build/ s3://trade-tariff-tech-docs-${ACCOUNT_ID}/
-
