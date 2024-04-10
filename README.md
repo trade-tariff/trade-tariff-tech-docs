@@ -1,8 +1,8 @@
 # OTT Developer Docs
 
 👉 https://docs.trade-tariff.service.gov.uk/ - production
-👉 https://docs.dev.trade-tariff.service.gov.uk/ - staging
-👉 https://docs.staging.trade-tariff.service.gov.uk/ - development
+👉 https://docs.staging.trade-tariff.service.gov.uk/ - staging
+👉 https://docs.dev.trade-tariff.service.gov.uk/ - development
 
 This is a static site generated with Middleman, using [alphagov/tech-docs-template](https://github.com/alphagov/tech-docs-template).
 
