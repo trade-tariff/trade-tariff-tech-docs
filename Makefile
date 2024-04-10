@@ -3,13 +3,10 @@
 start: build
 	NO_CONTRACTS=true bundle exec middleman server
 
-install:
-	bundle exec middleman build
-
 test:
 	bundle exec rake
 
-build: install clean
+build: clean
 	NO_CONTRACTS=true bundle exec middleman build
 
 clean:
