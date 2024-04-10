@@ -50,7 +50,7 @@ class ExternalDoc
   # When we import external documentation it can contain relative links to
   # source files within the repository that the documentation resides. We need
   # to filter out these types of links and make them absolute so that they
-  # continue to work when rendered as part of GOV.UK Developer Docs.
+  # continue to work when rendered as part of OTT Developer Docs.
   #
   # For example a link to `lib/link_expansion.rb` would be rewritten to
   # https://github.com/trade-tariff/publishing-api/blob/main/lib/link_expansion.rb
@@ -96,7 +96,7 @@ class ExternalDoc
 
   # When we import external documentation formatted with Markdown it can
   # contain links to other pages of documentation also formatted with Markdown.
-  # When the documentation is rendered as part of GOV.UK Developer Docs we
+  # When the documentation is rendered as part of OTT Developer Docs we
   # render it as HTML so we need to rewrite the links so that they have a .html
   # extension to match our routing.
   #

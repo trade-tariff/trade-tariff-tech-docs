@@ -6,9 +6,9 @@ hide_in_navigation: true
 
 # Accessibility statement
 
-This accessibility statement applies to the GOV.UK developer documentation at [https://docs.trade-tariff.service.gov.uk/](https://docs.trade-tariff.service.gov.uk/).
+This accessibility statement applies to the OTT developer documentation at [https://docs.trade-tariff.service.gov.uk/](https://docs.trade-tariff.service.gov.uk/).
 
-This website is run by the GOV.UK developer team at the Government Digital Service (GDS). We want as many people as possible to be able to use this website. For example, that means you should be able to:
+This website is run by the OTT developer team at the Government Digital Service (GDS). We want as many people as possible to be able to use this website. For example, that means you should be able to:
 
 - change colours, contrast levels and fonts
 - zoom in up to 300% without the text spilling off the screen
@@ -36,13 +36,13 @@ There are also issues caused by our Technical Documentation Template.
 
 ## Feedback and contact information
 
-If you need any part of this service in a different format like large print, audio recording or braille, [contact us using the GOV.UK contact form](https://www.gov.uk/contact/govuk).
+If you need any part of this service in a different format like large print, audio recording or braille, [contact us using the OTT contact form](https://www.gov.uk/contact/govuk).
 
 We’ll consider your request and get back to you within 5 working days.
 
 ## Reporting accessibility problems with this website
 
-We’re always looking to improve the accessibility of this website. If you find any problems not listed on this page or think we’re not meeting accessibility requirements, [contact us using the GOV.UK contact form](https://www.gov.uk/contact/govuk).
+We’re always looking to improve the accessibility of this website. If you find any problems not listed on this page or think we’re not meeting accessibility requirements, [contact us using the OTT contact form](https://www.gov.uk/contact/govuk).
 
 ### Enforcement procedure
 

@@ -43,7 +43,7 @@ exclude_rule "commands-show-output"
 # So, better to turn the rule off for now.
 exclude_rule "list-indent"
 
-# Some pages, such as the "Architectural deep-dive of GOV.UK", break into
+# Some pages, such as the "Architectural deep-dive of OTT", break into
 # sections which all follow the same format, e.g.
 #
 # ## Foo
