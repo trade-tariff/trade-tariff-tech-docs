@@ -29,7 +29,7 @@ RSpec.describe CommitHelpers do
         file_descriptor: OpenStruct.new(relative_path: source_file),
       )
       expect(helper.commit_url(current_page)).to match(
-        /https:\/\/github.com\/trade-tariff\/govuk-developer-docs\/commit\/[0-9a-f]{40}$/,
+        /https:\/\/github.com\/trade-tariff\/trade-tariff-tech-docs\/commit\/[0-9a-f]{40}$/,
       )
     end
 

@@ -7,7 +7,7 @@ parent: "/manual.html"
 ---
 
 [mit-license]: https://en.wikipedia.org/wiki/MIT_License
-[docs-applications]: https://github.com/trade-tariff/govuk-developer-docs/blob/main/data/repos.yml
+[docs-applications]: https://github.com/trade-tariff/trade-tariff-tech-docs/blob/main/data/repos.yml
 [get-started]: /manual/get-started.html
 [linting]: /manual/configure-linting.html
 [rails-conv]: /manual/conventions-for-rails-applications.html
