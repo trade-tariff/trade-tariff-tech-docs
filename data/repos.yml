@@ -3,7 +3,7 @@
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-testing
-  type: Infrastructure
+  type: Testing
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-frontend
@@ -19,15 +19,11 @@
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-tech-docs
-  type: Frontend
+  type: Static site
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-dev-hub-backend
   type: APIs
-  team: "#trade-tariff-write"
-
-- repo_name: trade-tariff-lambdas-dev-hub-backups
-  type: Lambdas
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-duty-calculator
@@ -47,19 +43,19 @@
   team: "#trade-tariff-write"
 
 - repo_name: process-appendix-5a
-  type: Infrastructure
+  type: Utilities
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-tools
-  type: Infrastructure
+  type: Utilities
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-api-docs
-  type: APIs
+  type: Static site
   team: "#trade-tariff-write"
 
 - repo_name: electronic-tariff-file
-  type: Infrastructure
+  type: Utilities
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-ci-orb
@@ -71,31 +67,35 @@
   team: "#trade-tariff-write"
 
 - repo_name: routing-filter
-  type: Infrastructure
+  type: Gems
   team: "#trade-tariff-write"
 
 - repo_name: download-CDS-files
-  type: Infrastructure
+  type: Utilities
   team: "#trade-tariff-write"
 
 - repo_name: uktt
-  type: APIs
+  type: Gems
   team: "#trade-tariff-write"
 
 - repo_name: rules-of-origin-builder-uk
-  type: Frontend
+  type: Utilities
+  team: "#trade-tariff-write"
+
+- repo_name: rules-of-origin-builder-xi
+  type: Utilities
   team: "#trade-tariff-write"
 
 - repo_name: ott-prototype
-  type: Frontend
+  type: Prototyping
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-performance-testing
-  type: Infrastructure
+  type: Testing
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-reporting
-  type: Infrastructure
+  type: Static site
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-lambdas-appendix5a
@@ -103,7 +103,7 @@
   team: "#trade-tariff-write"
 
 - repo_name: preference-utilisation-analysis
-  type: Infrastructure
+  type: Utilities
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-cloudwatch-synthetics-canaries
@@ -111,7 +111,7 @@
   team: "#trade-tariff-write"
 
 - repo_name: basic-python-tariff-query
-  type: APIs
+  type: Utilities
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-lambdas-uk-issues-mailer
@@ -127,13 +127,9 @@
   team: "#trade-tariff-write"
 
 - repo_name: deliverables-report-writer
-  type: Infrastructure
+  type: Utilities
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-lambdas-uk-daily-file-mailer
   type: Lambdas
-  team: "#trade-tariff-write"
-
-- repo_name: rules-of-origin-builder-xi
-  type: Frontend
   team: "#trade-tariff-write"
