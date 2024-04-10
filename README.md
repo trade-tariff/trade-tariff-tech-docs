@@ -1,8 +1,10 @@
 # OTT Developer Docs
 
-👉 https://docs.trade-tariff.service.gov.uk/ - production
-👉 https://docs.staging.trade-tariff.service.gov.uk/ - staging
-👉 https://docs.dev.trade-tariff.service.gov.uk/ - development
+You can find the developer docs deployed, here:
+
+- [production]
+- [staging]
+- [development]
 
 This is a static site generated with Middleman, using [alphagov/tech-docs-template](https://github.com/alphagov/tech-docs-template).
 
@@ -79,6 +81,7 @@ This will create a `build` directory containing a set of HTML files.
 
 [MIT License](LICENCE)
 
-[development]: /.github/workflows/development.yml
-[staging]: /.github/workflows/staging.yml
-[production]: /.github/workflows/production.yml
+
+[development]: https://docs.dev.trade-tariff.service.gov.uk/
+[staging]: https://docs.staging.trade-tariff.service.gov.uk/
+[production]: https://docs.trade-tariff.service.gov.uk/

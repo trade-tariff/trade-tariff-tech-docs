@@ -1,6 +1,6 @@
 ---
 owner_slack: "#trade-tariff-infrastructure"
-title: Backup and restore databases in AWS RDS
+title: Restore databases in AWS RDS
 section: Backups
 layout: manual_layout
 parent: "/manual.html"
