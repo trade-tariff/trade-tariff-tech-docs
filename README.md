@@ -1,6 +1,8 @@
-# GOV.UK Developer Docs
+# OTT Developer Docs
 
-👉 https://docs.trade-tariff.service.gov.uk/
+👉 https://docs.trade-tariff.service.gov.uk/ - production
+👉 https://docs.dev.trade-tariff.service.gov.uk/ - staging
+👉 https://docs.staging.trade-tariff.service.gov.uk/ - development
 
 This is a static site generated with Middleman, using [alphagov/tech-docs-template](https://github.com/alphagov/tech-docs-template).
 
@@ -15,14 +17,14 @@ bundle install
 
 ## Run the tests locally
 
-```
-bundle exec rake
+```sh
+make test
 ```
 
 ## Run the app locally
 
 ```sh
-SKIP_PROXY_PAGES=true ./startup.sh
+SKIP_PROXY_PAGES=true make start
 ```
 
 ## Proxy pages
@@ -35,33 +37,40 @@ The app downloads these "proxy pages" at startup and this can cause GitHub to ra
 
 1. Store the token in a `.env` file:
 
-    ```sh
-    GITHUB_TOKEN=somethingsomething
-    ```
+```sh
+export GITHUB_TOKEN=somethingsomething
+```
 
 1. Start the application:
 
-    ```sh
-    ./startup.sh
-    ```
+```sh
+make start
+```
 
 ## Update to the latest Tech Docs template
 
 ```sh
-bin/update
+make update-tech-docs
 ```
 
 ## Deployment
 
-We host GOV.UK Developer Docs as a static site on GitHub Pages. The [ci.yml] GitHub Actions workflow updates the site automatically:
+We host OTT Developer Docs as a static site in S3. The GitHub Actions workflows [development], [staging] and [production] updates the site automatically:
 
-- when a PR is merged to the default branch
+- when a PR is opened (releases to development)
+- when a PR is merged (releases to development, staging and production - in order)
 - on an hourly schedule, to pick up changes to docs included from other repos
 
 ### Build the static site locally
 
 ```sh
-NO_CONTRACTS=true bundle exec middleman build
+make build
+```
+
+### Run the static site locally
+
+```sh
+make
 ```
 
 This will create a `build` directory containing a set of HTML files.
@@ -70,4 +79,6 @@ This will create a `build` directory containing a set of HTML files.
 
 [MIT License](LICENCE)
 
-[ci.yml]: /.github/workflows/ci.yml
+[development]: /.github/workflows/development.yml
+[staging]: /.github/workflows/staging.yml
+[production]: /.github/workflows/production.yml
