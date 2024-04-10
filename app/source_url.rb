@@ -26,6 +26,6 @@ private
 
   # As the last fallback link to the source file in this repository.
   def source_from_file
-    "https://github.com/trade-tariff/govuk-developer-docs/blob/main/source/#{current_page.file_descriptor[:relative_path]}"
+    "https://github.com/trade-tariff/trade-tariff-tech-docs/blob/main/source/#{current_page.file_descriptor[:relative_path]}"
   end
 end

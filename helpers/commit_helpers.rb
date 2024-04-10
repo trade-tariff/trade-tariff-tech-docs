@@ -5,7 +5,7 @@ module CommitHelpers
     if current_page.data.latest_commit
       "https://github.com/trade-tariff/#{current_page.data.repo_name}/commit/#{current_page.data.latest_commit[:sha]}"
     elsif local_commit(current_page)
-      "https://github.com/trade-tariff/govuk-developer-docs/commit/#{local_commit(current_page).sha}"
+      "https://github.com/trade-tariff/trade-tariff-tech-docs/commit/#{local_commit(current_page).sha}"
     else
       "#"
     end
