@@ -27,8 +27,8 @@ The procedure for restoring a DynamoDB table using PITR is as follows:
 2. Select the Backups tab
 3. Click Restore
 4. Choose a name for your table (for example `CustomerApiKeys-restored`)
-5. Pick eith the latest snapshot or specify a date and time where the data was last in a good state
-6. Decide whether you need secondary indexes restored (pick `Restore the entire table`)
+5. Pick either the latest snapshot or specify a date and time where the data was last in a good state
+6. Decide whether you need secondary indexes restored (pick `Restore the entire table`). This is more expensive but may be necessary if you have a lot of indexed data that is crucial for your application's performance
 7. Choose `Same Region` for the region
 8. Choose `Owned by Amazon DynamoDB` for the encryption keys
 9. Select Restore at the bottom of the form
