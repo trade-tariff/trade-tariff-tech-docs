@@ -31,6 +31,7 @@ class ExternalDoc
       HeadingFilter,
       AbsoluteLinkFilter,
       MarkdownLinkFilter,
+      MermaidFilter,
     ]
 
     markdown = "" if markdown.nil?
@@ -158,6 +159,21 @@ class ExternalDoc
         if node.children.first
           node[:id] = id
         end
+      end
+
+      doc
+    end
+  end
+
+  # This filter is used to convert code blocks with the language set to "mermaid" to pre blocks which are later rendered as SVGs
+  class MermaidFilter < HTML::Pipeline::Filter
+    def call
+      return doc unless doc.search("pre[lang=\"mermaid\"]").any?
+
+      doc.search("pre[lang=\"mermaid\"]").each do |pre_element|
+        pre_element["class"] = "mermaid"
+        code_element = pre_element.search("code").first
+        pre_element.inner_html = code_element.inner_html
       end
 
       doc
