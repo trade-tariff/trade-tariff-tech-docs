@@ -77,6 +77,37 @@ make
 
 This will create a `build` directory containing a set of HTML files.
 
+### Middleman overview
+
+For the uninitiated, the process of building static pages looks something like the following:
+
+```mermaid
+graph TD;
+    A[Start Middleman Build] -->|Read Config| B[Initialize Configuration];
+    B --> C[Load Custom Extensions];
+    C --> D[Configure Tech Docs];
+    D --> E[Set Markdown Options];
+    E -->|Development Config| F[Configure Development Environment];
+    F --> G[Configure Sitemap for Google];
+    G --> H[Define Helpers];
+    H --> I[Process Source Files];
+    I --> J[Ignore Specified Files and Directories];
+    J --> K[Apply Layouts];
+    K --> L[Render Markup];
+    L --> M[Execute Proxy Pages];
+    M --> N[Generate Static Files];
+    N --> O[Build Complete];
+
+    subgraph Custom Script
+    D; E; F; G; H; M;
+    end
+
+    subgraph Middleman Internal Processes
+    B; I; J; K; L; N;
+    end
+```
+
+
 ## Licence
 
 [MIT License](LICENCE)
