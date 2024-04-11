@@ -87,42 +87,7 @@ class Repo
   end
 
   def sentry_url
-    if repo_data["sentry_url"] == false
-      nil
-    elsif repo_data["sentry_url"]
-      repo_data["sentry_url"]
-    else
-      "https://sentry.io/govuk/app-#{repo_name}"
-    end
-  end
-
-  def argo_cd_urls
-    return [] unless production_hosted_on_eks?
-
-    argo_cd_apps.each_with_object({}) do |app_name, hash|
-      hash[app_name] = "https://argo.eks.production.govuk.digital/applications/cluster-services/#{app_name}"
-    end
-  end
-
-  def dashboard_url
-    if repo_data["dashboard_url"]
-      repo_data["dashboard_url"]
-    elsif production_hosted_on_eks?
-      query_string = argo_cd_apps.map { |app| "var-app=#{app}" }.join("&")
-      "https://grafana.eks.production.govuk.digital/d/app-requests/app3a-request-rates-errors-durations?#{query_string}"
-    end
-  end
-
-  def kibana_url
-    return if repo_data["kibana_url"] == false
-
-    kibana_url_for(app: app_name, hours: 3)
-  end
-
-  def kibana_worker_url
-    return if repo_data["kibana_worker_url"] == false
-
-    kibana_url_for(app: "#{app_name}-worker", hours: 3, include: %w[level message])
+    repo_data["sentry_url"]
   end
 
   def api_docs_url
@@ -131,10 +96,6 @@ class Repo
 
   def component_guide_url
     repo_data["component_guide_url"]
-  end
-
-  def metrics_dashboard_url
-    repo_data["metrics_dashboard_url"]
   end
 
   def type

@@ -1,6 +1,7 @@
 - repo_name: trade-tariff-backend
   type: APIs
   team: "#trade-tariff-write"
+  sentry_url: "https://sentry.io/engine-le/tariff-backend"
 
 - repo_name: trade-tariff-testing
   type: Testing
@@ -9,6 +10,7 @@
 - repo_name: trade-tariff-frontend
   type: Frontend
   team: "#trade-tariff-write"
+  sentry_url: "https://sentry.io/engine-le/tariff-frontend"
 
 - repo_name: trade-tariff-platform-aws-terraform
   type: Infrastructure
@@ -17,6 +19,7 @@
 - repo_name: trade-tariff-admin
   type: Frontend
   team: "#trade-tariff-write"
+  sentry_url: "https://sentry.io/engine-le/tariff-admin"
 
 - repo_name: trade-tariff-tech-docs
   type: Static site
@@ -25,18 +28,22 @@
 - repo_name: trade-tariff-dev-hub-backend
   type: APIs
   team: "#trade-tariff-write"
+  sentry_url: "https://sentry.io/engine-le/tariff-dev-hub-backend"
 
 - repo_name: trade-tariff-duty-calculator
   type: Frontend
   team: "#trade-tariff-write"
+  sentry_url: "https://sentry.io/engine-le/tariff-duty-calculator"
 
 - repo_name: trade-tariff-dev-hub-frontend
   type: Frontend
   team: "#trade-tariff-write"
+  sentry_url: "https://sentry.io/engine-le/tariff-dev-hub-frontend"
 
 - repo_name: trade-tariff-search-query-parser
   type: APIs
   team: "#trade-tariff-write"
+  sentry_url: "https://sentry.io/engine-le/search-query-parser"
 
 - repo_name: trade-tariff-platform-terraform-modules
   type: Infrastructure
