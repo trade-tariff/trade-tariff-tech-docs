@@ -11,6 +11,17 @@
 // reworked version of modules.js from govuk_publishing_components
 // needed to manually start tech docs gem modules now that we're including
 // the modules code from govuk_publishing_components
+
+var renderMermaid = function() {
+  import("https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs")
+    .then(function(mermaid) {
+      console.log('Mermaid loaded', mermaid);
+    })
+    .catch(function(error) {
+      console.error('Error loading Mermaid:', error);
+    });
+};
+
 var devdocsModulesFind = function () {
   container = document
 
@@ -76,3 +87,9 @@ var devdocsModulesStart = function () {
 $(document).ready(function() {
   devdocsModulesStart()
 })
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderMermaid)
+} else {
+  renderMermaid()
+}
