@@ -1,7 +1,7 @@
 ---
 owner_slack: "#ott-core"
-title: Get started developing on GOV.UK
-description: Guide for new developers on GOV.UK
+title: Get started developing on the OTT
+description: Guide for new developers on OTT
 layout: manual_layout
 section: Learning GOV.UK
 ---
@@ -173,8 +173,8 @@ We use [ecs exec](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ec
 We use a single signon app to control access to an admin application.
 We run our own version of this for testing purposes but in production this is hosted by the GDS team
 
-1. Ask any [developer][developer-chat] for access to the [development][development-admin]] and [staging][staging-admin] admin apps
-2. Ask in the [infrastructure][infrastructure-chat] team for [production][production-admin] access
+1. Ask in [#ott-core][developer-chat] for access to the [development][development-admin] and [staging][staging-admin] admin apps
+2. Ask in [#trade-tariff-infrastructure][infrastructure-chat] for [production][production-admin] access
 
 [development-admin]: https://admin.dev.trade-tariff.service.gov.uk/
 [staging-admin]: https://admin.staging.trade-tariff.service.gov.uk/
@@ -189,14 +189,14 @@ Developers and devops are responsible for releases and we use a buddy system wit
 and secondary deployer who are responsible for:
 
 1. Checking any release notes for today's release in the [#ott-core][developer-chat] channel
-2. Verifying the [regression suites][regression-chat] are passing in [#tariffs-regression][regression-chat]
+2. Verifying the regression suites are passing in [#tariffs-regression][regression-chat]
 3. Making sure that all applications are released via the circle ci interface
 
-> Failing deploys can be communicated to the [#trade-tariff-infrastructure][infrastructure-chat]
+> Failing deploys can be communicated in the [#trade-tariff-infrastructure][infrastructure-chat] slack channel
 
 ## 10. Get familiar with the applications we run
 
-You can review all of our application repos in the [repos page](/repos).
+You can review all of our application repos in the [repos page](/repos.html).
 
 [regression-chat]: https://future-borders.slack.com/archives/C02T8JXUYE9
 [developer-chat]: https://future-borders.slack.com/archives/C01DXUP15M5
