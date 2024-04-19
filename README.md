@@ -107,11 +107,9 @@ graph TD;
     end
 ```
 
-
 ## Licence
 
 [MIT License](LICENCE)
-
 
 [development]: https://docs.dev.trade-tariff.service.gov.uk/
 [staging]: https://docs.staging.trade-tariff.service.gov.uk/

@@ -83,5 +83,3 @@ the [DocumentDB documentation].
 View the documentation on [how to backup and restore in AWS RDS].
 
 [how to backup and restore in AWS RDS]: /manual/howto-backup-and-restore-in-aws-rds.html
-
-[govuk-aws]: https://github.com/trade-tariff/govuk-aws
