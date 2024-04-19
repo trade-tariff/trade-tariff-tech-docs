@@ -26,7 +26,7 @@ We use a few domains:
 ## DNS for `*.service.gov.uk` domains
 
 GOV.UK Technical 2nd Line are responsible for delegating DNS to other government services.
-Note that we __do not__ manage any other DNS records: if you get a request concerning anything other than `NS` records, it should be rejected.
+Note that we **do not** manage any other DNS records: if you get a request concerning anything other than `NS` records, it should be rejected.
 
 When you've verified the authenticity of the request as per the SRE docs above, you should:
 
