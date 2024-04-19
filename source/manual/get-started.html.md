@@ -162,6 +162,12 @@ volumes:
 
 ## 7. Install the ecsexec script
 
+We use [ecs exec](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) to establish a console to our applications to run one-off tasks.
+
+- Download a copy of the [ecsexec](https://github.com/trade-tariff/trade-tariff-tools/blob/main/bin/ecsexec.sh) script
+- Export your environment variables for AWS (including AWS_REGION)
+- Follow the instructions in the [README.md](https://github.com/trade-tariff/trade-tariff-tools/tree/main)
+
 ## 8. Get Signon accounts
 
 We use a single signon app to control access to an admin application.
