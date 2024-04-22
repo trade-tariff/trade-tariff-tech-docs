@@ -145,3 +145,11 @@
   type: APIs (lambda)
   team: "#trade-tariff-write"
   sentry_url: "https://sentry.io/engine-le/tariff-lambdas-fpo-search"
+
+- repo_name: trade-tariff-lambdas-status-checks
+  type: APIs (lambda)
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-status
+  type: Static site
+  team: "#trade-tariff-write"
