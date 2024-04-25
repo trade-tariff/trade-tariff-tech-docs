@@ -1,9 +1,11 @@
 #!/bin/sh
 echo "Initializing localstack s3"
 
+# You must specify a region. You can also configure your region by running "aws configure".
 
 echo "Creating dynamodb tables..."
-aws dynamodb create-table \
+aws --endpoint-url=http://localhost:4566  dynamodb create-table \
+    --region eu-west-2 \
     --table-name CustomerApiKeys \
     --attribute-definitions \
         AttributeName=CustomerApiKeyId,AttributeType=S \
