@@ -201,3 +201,10 @@ You can review all of our application repos in the [repos page](/repos.html).
 [regression-chat]: https://future-borders.slack.com/archives/C02T8JXUYE9
 [developer-chat]: https://future-borders.slack.com/archives/C01DXUP15M5
 [infrastructure-chat]: https://future-borders.slack.com/archives/C042HGJBHK8
+
+## 11. A note on merging pull requests
+
+We rely on merge commits (e.g. no squashing/rebasing) to highlight when a pull request
+has been merged and in the generation of automated release notes.
+
+You can find more information on which repos depend on merge commits, here https://github.com/trade-tariff/trade-tariff-tools/blob/main/bin/generate_release_notes.sh
