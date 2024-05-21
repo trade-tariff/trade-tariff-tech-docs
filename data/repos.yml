@@ -101,6 +101,10 @@
   type: Testing
   team: "#trade-tariff-write"
 
+- repo_name: trade-tariff-fpo-dev-hub-e2e
+  type: Testing
+  team: "#trade-tariff-write"
+
 - repo_name: trade-tariff-reporting
   type: Static site
   team: "#trade-tariff-write"
