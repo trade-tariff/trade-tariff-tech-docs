@@ -200,7 +200,7 @@ You can review all of our application repos in the [repos page](/repos.html).
 
 ## 11. A note on merging pull requests
 
-We rely on merge commits (e.g., no squashing or rebasing) to clearly indicate when a pull request has been merged and to facilitate the generation of automated release notes.
+We rely on merge commits (e.g., no squash or rebase merging) to clearly indicate when a pull request has been merged and to facilitate the generation of automated release notes.
 
 While rebasing is generally acceptable during the development process, please ensure that feature branches are not rebased when they are being closed off or merged. This practice helps maintain the integrity of our commit history and ensures that our automated tools function correctly.
 
