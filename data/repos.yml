@@ -157,3 +157,7 @@
 - repo_name: trade-tariff-status
   type: Static site
   team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-commodi-tea
+  type: Frontend
+  team: "#trade-tariff-write"
