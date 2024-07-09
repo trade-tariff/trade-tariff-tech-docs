@@ -4,8 +4,6 @@ title: Accessibility statement
 hide_in_navigation: true
 ---
 
-# Accessibility statement
-
 This accessibility statement applies to the OTT developer documentation at [https://docs.trade-tariff.service.gov.uk/](https://docs.trade-tariff.service.gov.uk/).
 
 This website is run by the OTT developer team at the Government Digital Service (GDS). We want as many people as possible to be able to use this website. For example, that means you should be able to:

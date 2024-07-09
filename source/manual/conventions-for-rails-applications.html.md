@@ -204,9 +204,7 @@ to avoid prefixing every test with `require "spec_helper"`.
 
 Common tools used with RSpec are:
 
-- [webmock][] gem to stub HTTP requests - for stubbing communication between
-  GOV.UK applications [gds-api-adapters][] provides a library of helper methods
-  that are preferred to manual stubbing;
+- [webmock][] gem to stub HTTP requests - for stubbing communication between GOV.UK applications
 - [SimpleCov][] for monitoring code coverage;
 - [factory_bot_rails][] for providing fixtures/test data;
 - [`ActiveSupport::Testing::TimeHelpers`][time-helpers] for time manipulation.
