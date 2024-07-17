@@ -9,10 +9,7 @@ important: true
 
 ## Update TO_EMAILS for electronic tariff file
 
-The **TO_EMAILS** is a distribution list used to send tariff updates to which needs to be changed from time to time.
-
-**IMPORTANT** It cannot be edited and must be deleted and re-created so before attempting this back up the current distribution list 
-from an email already sent.  Then follow these steps 
+The **TO_EMAILS** is a distribution list used to send tariff updates to which needs to be changed from time to time.<br><br>**IMPORTANT** It cannot be edited and must be deleted and re-created so before attempting this back up the current distribution list from an email already sent. Then follow these steps<br><br>
 
 1. Go to [https://app.circleci.com/settings/organization/github/trade-tariff/contexts](https://app.circleci.com/settings/organization/github/trade-tariff/contexts)
 
