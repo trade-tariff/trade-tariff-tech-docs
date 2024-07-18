@@ -15,6 +15,6 @@ The **TO_EMAILS** is a distribution list used to send tariff updates to which ne
 
 2. Click on the context electronic-tariff-file
 
-3. remove the Env var TO_EMAILS
+3. Remove the env var TO_EMAILS
 
 4. Click on “Add Environment Variable” and add a variable with the same name “TO_EMAILS” and set the value (the list of emails that will receive the notification for the ETF Changes)
