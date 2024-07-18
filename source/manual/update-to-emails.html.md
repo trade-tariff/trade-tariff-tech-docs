@@ -1,7 +1,7 @@
 ---
 owner_slack: "#govuk-developers"
 title: Update TO_EMAILS (distribution list) for electronic tariff file
-section: Deployment
+section: Electronic Tariff File
 layout: manual_layout
 parent: "/manual.html"
 important: true
