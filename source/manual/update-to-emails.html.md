@@ -1,5 +1,5 @@
 ---
-owner_slack: "#govuk-developers"
+owner_slack: "#ott-core"
 title: Update TO_EMAILS (distribution list) for electronic tariff file
 section: Electronic Tariff File
 layout: manual_layout
