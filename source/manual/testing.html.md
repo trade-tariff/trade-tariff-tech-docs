@@ -1,5 +1,5 @@
 ---
-owner_slack: "#govuk-developers"
+owner_slack: "#ott-core"
 title: 'How we test GOV.UK'
 section: Testing
 type: learn

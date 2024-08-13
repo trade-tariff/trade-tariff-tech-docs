@@ -1,5 +1,5 @@
 ---
-owner_slack: "#govuk-developers"
+owner_slack: "#ott-core"
 title: Deploy Static
 section: Deployment
 layout: manual_layout

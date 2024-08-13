@@ -1,5 +1,5 @@
 ---
-owner_slack: "#govuk-developers"
+owner_slack: "#ott-core"
 title: How to raise a support ticket with AWS
 
 section: AWS

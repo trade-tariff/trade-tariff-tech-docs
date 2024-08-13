@@ -1,5 +1,5 @@
 ---
-owner_slack: "#govuk-developers"
+owner_slack: "#ott-core"
 title: Conventions for Rails applications
 section: Applications
 type: learn

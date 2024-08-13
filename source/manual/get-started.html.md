@@ -206,7 +206,17 @@ While rebasing is generally acceptable during the development process, please en
 
 For more information on which repositories depend on merge commits, please refer to [this][generate-release-notes] script.
 
+## 12. A note on installing dependencies
+
+We use [asdf][asdf] to manage versions of programming languages and tools. This allows us to have multiple versions of the same tool installed on our machines.
+
+Our main languages are Ruby and Node.js, so you will need to install these with asdf.
+
+To keep up-to-date with ruby installations in each project you can follow the [ruby installation guide][ruby-installation].
+
 [generate-release-notes]: https://github.com/trade-tariff/trade-tariff-tools/blob/main/bin/generate_release_notes.sh
 [regression-chat]: https://future-borders.slack.com/archives/C02T8JXUYE9
 [developer-chat]: https://future-borders.slack.com/archives/C01DXUP15M5
 [infrastructure-chat]: https://future-borders.slack.com/archives/C042HGJBHK8
+[asdf]: https://asdf-vm.com/
+[ruby-installation]: /manual/ruby.html

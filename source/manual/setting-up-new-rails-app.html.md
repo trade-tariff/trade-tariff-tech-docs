@@ -1,5 +1,5 @@
 ---
-owner_slack: "#govuk-developers"
+owner_slack: "#ott-core"
 title: Set up a new Rails application
 section: Applications
 layout: manual_layout
