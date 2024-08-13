@@ -1,5 +1,5 @@
 ---
-owner_slack: "#govuk-developers"
+owner_slack: "#ott-core"
 title: Documentation style guide
 section: Documentation
 layout: manual_layout

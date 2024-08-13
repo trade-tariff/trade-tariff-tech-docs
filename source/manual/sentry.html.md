@@ -1,5 +1,5 @@
 ---
-owner_slack: "#govuk-developers"
+owner_slack: "#ott-core"
 title: Sentry
 parent: "/manual.html"
 layout: manual_layout

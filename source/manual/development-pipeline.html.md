@@ -1,5 +1,5 @@
 ---
-owner_slack: "#govuk-developers"
+owner_slack: "#ott-core"
 title: The development and deployment pipeline
 parent: "/manual.html"
 layout: manual_layout
@@ -76,7 +76,7 @@ It is important to ensure people are aware of a code freeze
 
 Let people know on Slack
 
-> Send a message to #govuk-developers on slack with the @channel
+> Send a message to #ott-core on slack with the @channel
 > prefix (to ensure people who are offline are notified) and email
 > <govuk-tech-members@digital.cabinet-office.gov.uk>. Your message
 > should include the repo you are freezing, the reason why, and the

@@ -1,5 +1,5 @@
 ---
-owner_slack: "#govuk-developers"
+owner_slack: "#ott-core"
 title: Policy on keeping software current
 parent: "/manual.html"
 layout: manual_layout
