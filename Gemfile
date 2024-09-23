@@ -16,7 +16,7 @@ gem "middleman"
 gem "middleman-search_engine_sitemap"
 
 gem "git"
-gem "html-pipeline"
+gem "html-pipeline", "~> 2"
 gem "mdl"
 
 gem "govuk_publishing_components"
