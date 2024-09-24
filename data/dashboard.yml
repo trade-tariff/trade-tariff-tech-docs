@@ -4,6 +4,8 @@
       sites:
         - name: Get started developing on OTT
           url: /manual/get-started.html
+        - name: OTT Testing Policy
+          url: /manual/testing-policy.html
     - name: Slack channels
       sites:
         - name: "#ott-core"
