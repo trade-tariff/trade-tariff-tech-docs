@@ -58,3 +58,9 @@ Acceptance tests are the tests that prove the system as a whole works as we expe
 Acceptance tests are nearly always written using Capybara.  The [Capybara documentation](https://rubydoc.info/github/teamcapybara/capybara) is a good place to start.
 
 ![testing-diagram](images/testing-diagram.png)
+
+### Synthetic tests
+
+Synthetic tests are tests that are not designed to test a specific unit of code, but rather to test the behaviour of the system as a whole.  Many acceptance tests can be used as synthetic tests, however synthetic tests are typically run in a production environment on a regular basis.  These tests are buily to test common user journeys through the system in a way that will not change the system state in any way - for instance: Can a user log in? Can they carry out a search?
+
+Where possible, acceptance tests should be used as the basis for synthetic tests, either partially or fully.  For example, if we have an acceptance test that tests the ability of a user to search for a document, we could potentially re-purpose or re-use that test in a synthetic context.
