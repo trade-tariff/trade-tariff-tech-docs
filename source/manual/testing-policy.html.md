@@ -1,6 +1,6 @@
 ---
 owner_slack: "#ott-core"
-title: Testing Policy
+title: Test Policy
 section: Guide for new developers on OTT
 layout: manual_layout
 parent: Learning GOV.UK
@@ -18,7 +18,7 @@ Well tested code is easier to maintain, easier to extend, and easier to deploy.
 
 * Core functionality that is critical to the system.  We must know that once implemented, this functionality will continue to work as expected through later change and refactoring
 * Areas of doubt.  If we are not 100% sure that a particular area of code is correct, we should test it to make sure we know that it is correct.
-  
+
 > Adding tests for code we are confident in arguably adds technical debt to the codebase.  These are tests that slow down the test suite for little benefit, and add brittleness to the codebase through change.  Think carefully about whether this is a good trade-off before adding tests.
 
 ### What should we not test?
