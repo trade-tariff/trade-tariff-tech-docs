@@ -68,7 +68,7 @@ Synthetic tests are tests that are not designed to test a specific unit of code,
 Where possible, acceptance tests should be used as the basis for synthetic tests, either partially or fully.  For example, if we have an acceptance test that tests the ability of a user to search for a document, we could potentially re-purpose or re-use that test in a synthetic context.
 
 
-#### A note on JavaScript testing
+### A note on JavaScript testing
 
 JavaScript is a dynamic language, and as such, it is difficult to test.  There is an abundance of JavaScript testing frameworks, but they are not all equally good. What's more JavaScript testing is often done in JavaScript itself, which is not ideal due to the differing language and frameworks to the rest of the test suites we might be managing.
 
