@@ -61,13 +61,15 @@ Acceptance tests are nearly always written using Capybara.  The [Capybara docume
 
 ![testing-diagram](images/testing-diagram.png)
 
-### Synthetic tests
+## Notes
+
+### Synthetic testing
 
 Synthetic tests are tests that are not designed to test a specific unit of code, but rather to test the behaviour of the system as a whole.  Many acceptance tests can be used as synthetic tests, however synthetic tests are typically run in a production environment on a regular basis.  These tests are built to test common user journeys through the system in a way that will not change the system state in any way - for instance: Can a user log in? Can they carry out a search?
 
 Where possible, acceptance tests should be used as the basis for synthetic tests, either partially or fully.  For example, if we have an acceptance test that tests the ability of a user to search for a document, we could potentially re-purpose or re-use that test in a synthetic context.
 
-### A note on JavaScript testing
+### JavaScript testing
 
 JavaScript is a dynamic language, and as such, it is difficult to test.  There is an abundance of JavaScript testing frameworks, but they are not all equally good. What's more JavaScript testing is often done in JavaScript itself, which is not ideal due to the differing language and frameworks to the rest of the test suites we might be managing.
 
