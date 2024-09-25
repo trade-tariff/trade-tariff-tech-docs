@@ -14,6 +14,8 @@ There are many reasons why we should test our code, but practically speaking, th
 
 Well tested code is easier to maintain, easier to extend, and easier to deploy.
 
+This policy strives to form a baseline for what we should be testing and how.  Principally this is in order to ensure we keep our test suite in line with the values of keeping things simple and necessary.  Test suites should be fast razor sharp tools for instilling confidence, not a wall we have to climb over to move forwards.
+
 ### What should we test?
 
 * Core functionality that is critical to the system.  We must know that once implemented, this functionality will continue to work as expected through later change and refactoring
