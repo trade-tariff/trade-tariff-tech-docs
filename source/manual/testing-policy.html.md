@@ -72,7 +72,7 @@ Where possible, acceptance tests should be used as the basis for synthetic tests
 
 JavaScript is a dynamic language, and as such, it is difficult to test.  There is an abundance of JavaScript testing frameworks, but they are not all equally good. What's more JavaScript testing is often done in JavaScript itself, which is not ideal due to the differing language and frameworks to the rest of the test suites we might be managing.
 
-Therefore, where possible, we should aim to test JavaScript using the same tools we already use, such as Capybara.  This will provide us with a commonality across our test suite and also allow us familiar tools in a more obvious way.  For instance:
+Therefore, where possible, we should aim to test JavaScript using the same tools we already use, such as Capybara.  This will provide us with a commonality across our test suite and also allow us to use familiar tools in a more obvious way.  For instance:
 
 Jasmine:
 
