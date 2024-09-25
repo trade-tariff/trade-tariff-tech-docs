@@ -75,6 +75,7 @@ JavaScript is a dynamic language, and as such, it is difficult to test.  There i
 Therefore, where possible, we should aim to test JavaScript using the same tools we already use, such as Capybara.  This will provide us with a commonality across our test suite and also allow us familiar tools in a more obvious way.  For instance:
 
 Jasmine:
+
 ```javascript
 $("#someButtonId").trigger("click");
 expect('click').toHaveBeenTriggeredOn('#someButtonId');
@@ -83,6 +84,7 @@ expect(menu).toBe('menu-visible');
 ```
 
 vs Capybara:
+
 ```ruby
 click_on('Menu')
 expect(find("#menu").visible?).to be true
