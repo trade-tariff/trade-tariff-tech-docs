@@ -21,7 +21,7 @@ This policy strives to form a baseline for what we should be testing and how.  P
 * Core functionality that is critical to the system.  We must know that once implemented, this functionality will continue to work as expected through later change and refactoring
 * Areas of doubt.  If we are not 100% sure that a particular area of code is correct, we should test it to make sure we know that it is correct.
 
-> Adding tests for code we are confident in arguably adds technical debt to the codebase.  These are tests that slow down the test suite for little benefit, and add brittleness to the codebase through change.  Think carefully about whether this is a good trade-off before adding tests.
+> Adding tests for code we are confident in arguably adds technical debt to the codebase.  These are tests that slow down the test suite for little benefit, and add brittleness to the codebase through change.  Think carefully about whether this is a good trade-off before adding tests. Think - are your tests <a href="https://testdouble.com/insights/necessary-sufficient" target="_blank">necessary</a>?
 
 ### What should we not test?
 
