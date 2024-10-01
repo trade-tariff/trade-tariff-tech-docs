@@ -90,3 +90,7 @@ vs Capybara:
 click_on('Menu')
 expect(find("#menu").visible?).to be true
 ```
+
+### QA Resource
+
+This policy in no way is designed to replace the skills and knowledge of a QA tester, but rather to provide an automated way to get as much confidence in a system as possible.  It is still expected that QA testers will be involved in the testing process, but will largely be less involved in changes that are easily testable by automated scripts (for instance, QA are great at testing complex interactions).  However, this work ideally should be codified for future assurance.  It is likely that QA transitions from a role of manual testing of tickets, to contributing to the test suite and providing alternate views on functionality to improve our overall confidence.
