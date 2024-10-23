@@ -182,7 +182,7 @@ You'll need to have completed step 6 and confirmed on the Docker desktop app tha
 Install `postgresql`, if you haven't already, and check installation by running `psql -V`. Connect to your localhost server by running `psql -h localhost`.
 Run `\du` in the new session and check roles that can interact with the database - we're expecting `postgres` to be missing from that list.
 Once confirmed, run the below SQL queries:
-
+>
 > ```sql
 -- in psql terminal session
 CREATE ROLE postgres SUPERUSER;
