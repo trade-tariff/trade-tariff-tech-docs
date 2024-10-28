@@ -170,7 +170,7 @@ volumes:
 
 You'll need to have completed step 6 and confirmed on the Docker desktop app that all containers are running.
 
-- Clone [trade-tarif-backend](https://github.com/trade-tariff/trade-tariff-backend) in your developer directory,
+- Clone [trade-tariff-backend](https://github.com/trade-tariff/trade-tariff-backend) in your developer directory,
 - Download a copy of the staging database from AWS S3 storage, under the `database-backups-*` bucket,
 - Follow instructions in the [README.md](https://github.com/trade-tariff/trade-tariff-backend?tab=readme-ov-file#trade-tariff-backend) to finish setting up your local database,
 - Run `brew install postgresql` and check installation by running `psql -V`,
