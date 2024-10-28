@@ -166,25 +166,22 @@ volumes:
     driver: local
 ```
 
-## 7. Set up local backend services with pgAdmin
+## 7. Set up local backend services
 
 You'll need to have completed step 6 and confirmed on the Docker desktop app that all containers are running.
 
 - Clone [trade-tarif-backend](https://github.com/trade-tariff/trade-tariff-backend) in your developer directory,
 - Download a copy of the staging database from AWS S3 storage, under the `database-backups-*` bucket,
 - Follow instructions in the [README.md](https://github.com/trade-tariff/trade-tariff-backend?tab=readme-ov-file#trade-tariff-backend) to finish setting up your local database,
-- Install the [pgAdmin app](https://www.pgadmin.org/download/) for your OS,
-- Add new server using `localhost` as your host name.
+- Run `brew install postgresql` and check installation by running `psql -V`,
+- Confirm connection to your database by running `psql -h localhost`.
 
-<strong>Note:</strong> You can use any database management tool of your choosing, but pgAdmin is the recommended open-source solution.
-
-> <strong>Debugging: </strong> if pgAdmin fails to establish a connection with error "role postgres does not exist", you will need to add `postgres` as a `superuser`.
-Install `postgresql`, if you haven't already, and check installation by running `psql -V`. Connect to your localhost server by running `psql -h localhost`.
-Run `\du` in the new session and check roles that can interact with the database - we're expecting `postgres` to be missing from that list.
+> <strong>Note: </strong> if you choose to use a database management tool (i.e. pgAdmin) to connect to your database, you might encounter a `"role postgres does not exist"` error.
+> Connect to your localhost server by running `psql -h localhost`. Run `\du` in the new session and check roles that can interact with the database - we're expecting `postgres` to be missing from that list.
 Once confirmed, run the below SQL queries:
 >
 > ```sql
--- in psql terminal session
+-- psql terminal session
 CREATE ROLE postgres SUPERUSER;
 ALTER ROLE postgres WITH LOGIN;
 >```
