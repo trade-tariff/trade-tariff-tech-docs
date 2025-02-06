@@ -117,8 +117,8 @@ services:
     image: postgres:13
     environment:
       - PGDATA=/var/lib/postgresql/data/pgdata
-      - POSTGRES_USER=${USER}
-      - POSTGRES_PASSWORD=
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
       - LANG=C.UTF-8
       - POSTGRES_HOST_AUTH_METHOD=trust
     ports:
