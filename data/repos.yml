@@ -104,10 +104,6 @@
   type: Static site
   team: "#trade-tariff-write"
 
-- repo_name: trade-tariff-lambdas-appendix5a
-  type: Lambdas
-  team: "#trade-tariff-write"
-
 - repo_name: preference-utilisation-analysis
   type: Utilities
   team: "#trade-tariff-write"
@@ -124,20 +120,12 @@
   type: Lambdas
   team: "#trade-tariff-write"
 
-- repo_name: trade-tariff-lambdas-xi-certificate-update-mailer
-  type: Lambdas
-  team: "#trade-tariff-write"
-
 - repo_name: trade-tariff-lambdas-electronic-tariff-file-rotations
   type: Lambdas
   team: "#trade-tariff-write"
 
 - repo_name: deliverables-report-writer
   type: Utilities
-  team: "#trade-tariff-write"
-
-- repo_name: trade-tariff-lambdas-uk-daily-file-mailer
-  type: Lambdas
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-lambdas-fpo-search
