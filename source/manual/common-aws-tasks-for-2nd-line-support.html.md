@@ -82,4 +82,4 @@ the [DocumentDB documentation].
 
 View the documentation on [how to backup and restore in AWS RDS].
 
-[how to backup and restore in AWS RDS]: /manual/howto-backup-and-restore-in-aws-rds.html
+[how to backup and restore in AWS RDS]: /manual/how-to-backup-and-restore-in-aws-rds.html
