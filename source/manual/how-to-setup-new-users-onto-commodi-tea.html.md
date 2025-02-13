@@ -6,7 +6,7 @@ layout: manual_layout
 parent: "/manual.html"
 ---
 
-This playbook explains how to register and invite new users to the app when using AWS Cognito with self-registration disabled. 
+This playbook explains how to register and invite new users to the app when using AWS Cognito with self-registration disabled.
 
 ## Prerequisites
 
@@ -23,9 +23,9 @@ This playbook explains how to register and invite new users to the app when usin
 5. Click **Create user**.
 6. Fill in the details:
 
-  - **Invitation message**: Tick on the *Send an email invitation* option.
-  - **Email address**: Enter the user’s email.
-  - **Temporary password**: Set a temporary password.
+- **Invitation message**: Tick on the **Send an email invitation** option.
+- **Email address**: Enter the user’s email.
+- **Temporary password**: Set a temporary password.
 
 7. Click **Create user**.
 
@@ -38,6 +38,7 @@ AWS Cognito will automatically send an invitation email to the user with their l
 ## Invitation email
 
 The email includes:
+
 - A link to the app.
 - The user’s username (their email address).
 - A temporary password.
@@ -45,7 +46,7 @@ The email includes:
 
 Example email:
 
-> Subject: Your New "Commodi-Tea Staging" Account 
+> Subject: Your New "Commodi-Tea Staging" Account
 >
 > Body:
 > You have been invited to access Commodi-Tea Staging. Please use the > following details to log in and set up your account:
@@ -75,7 +76,6 @@ Example email:
 If you need to register users frequently, use the `AWS CLI` to automate the process.
 
 **Example CLI command**
-
 > aws cognito-idp admin-create-user \
   --user-pool-id `your_user_pool_id`\
   --username `user_email` \

@@ -181,9 +181,11 @@ You'll need to have completed step 6 and confirmed on the Docker desktop app tha
 Once confirmed, run the below SQL queries:
 >
 > ```sql
+>
 -- psql terminal session
 CREATE ROLE postgres SUPERUSER;
 ALTER ROLE postgres WITH LOGIN;
+>
 >```
 
 ## 8. Install the ecsexec script
