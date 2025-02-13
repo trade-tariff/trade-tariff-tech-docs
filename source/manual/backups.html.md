@@ -11,7 +11,7 @@ This document describes the backup policies and strategies for GOV.UK's producti
 
 > For restore playbooks, see:
 >
-> - [Restore a database in Amazon RDS](howto-backup-and-restore-in-aws-rds.html)
+> - [Restore a database in Amazon RDS](how-to-backup-and-restore-in-aws-rds.html)
 > - [Restore Elasticsearch indices from snapshots](elasticsearch-dumps.html)
 
 ## Databases in Amazon RDS and DocumentDB
