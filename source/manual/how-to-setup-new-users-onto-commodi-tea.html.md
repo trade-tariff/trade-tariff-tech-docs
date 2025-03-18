@@ -22,10 +22,9 @@ This playbook explains how to register and invite new users to the app when usin
 4. In the left-hand menu, click **User management → Users**.
 5. Click **Create user**.
 6. Fill in the details:
-
-- **Invitation message**: Tick on the **Send an email invitation** option.
-- **Email address**: Enter the user’s email.
-- **Temporary password**: Set a temporary password.
+  - **Invitation message**: Tick on the **Send an email invitation** option.
+  - **Email address**: Enter the user’s email and tick **Mark email address as verified**.
+  - **Temporary password**: Set a temporary password.
 
 7. Click **Create user**.
 
@@ -46,13 +45,15 @@ The email includes:
 
 Example email:
 
-> Subject: Your New "Commodi-Tea Staging" Account
+> Subject: Your New "Commodi-Tea" Account
 >
 > Body:
-> You have been invited to access Commodi-Tea Staging. Please use the > following details to log in and set up your account:
+> You have been invited to access Commodi-Tea. Please use the > following details to log in and set up your account:
 >
 > - Username: [email].
 > - Temporary Password: [temporary_password].
+>
+> This invitation expires in 7 days.
 >
 > You will be asked to provide your name and set up a new password as part of the setup process.
 > For security reasons, please do not share these details with anyone.
@@ -61,6 +62,8 @@ Example email:
 >
 > Best regards,
 > OTT Digital Support
+
+**Note:** Changes to the invitation message need to be done in the Terraform code.
 
 ## User first login
 
