@@ -1,0 +1,37 @@
+name: Reusable Build Workflow
+
+description: |
+  This workflow builds the 'build' folder ready for deployment.
+  It is reusable and can be called from other workflows.
+
+on:
+  workflow_call:
+    inputs:
+      ref:
+        description: The branch, tag or SHA to checkout
+        default: main
+        type: string
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                fetch-depth: 0
+
+            - uses: ruby/setup-ruby@v1
+              with:
+                 bundler-cache: true
+
+            - name: Build 'build' folder ready for deployment
+              run: make build
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Upload build artifact
+              uses: actions/upload-artifact@v4
+              with:
+                name: build-artifact
+                path: build/

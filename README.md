@@ -57,7 +57,7 @@ make update-tech-docs
 
 ## Deployment
 
-We host OTT Developer Docs as a static site in S3. The GitHub Actions workflows [development], [staging] and [production] updates the site automatically:
+We host OTT Developer Docs as a static site in S3. The GitHub Actions workflows [deploy_to_development], [deploy_to_dstaging] and [deploy_to_dproduction] updates the site automatically:
 
 - when a PR is opened (releases to development)
 - when a PR is merged (releases to development, staging and production - in order)
