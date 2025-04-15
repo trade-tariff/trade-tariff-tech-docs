@@ -1,0 +1,48 @@
+name: Deploy to staging
+
+on:
+  workflow_run:
+    workflows: 
+      - 'Deploy to development'
+    types: 
+      - completed
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: The branch, tag or SHA to checkout
+        default: main
+        type: string
+
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  AWS_REGION: 'eu-west-2'
+  IAM_ROLE_ARN: 'arn:aws:iam::451934005581:role/GithubActions-Tech-Docs-Role'
+
+jobs:
+  build-staging:
+    uses: ./.github/workflows/build.yml
+
+  deploy-staging:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    needs: build-staging
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: build-artifact
+          path: build/
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.IAM_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Upload to S3
+        run: |
+          ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
+
+          aws s3 cp --recursive build/ s3://trade-tariff-tech-docs-${ACCOUNT_ID}/

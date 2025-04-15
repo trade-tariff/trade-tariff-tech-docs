@@ -1,4 +1,4 @@
-name: development
+name: Deploy to development
 
 on:
   push:
@@ -11,6 +11,14 @@ on:
         description: The branch, tag or SHA to checkout
         default: main
         type: string
+
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  AWS_REGION: 'eu-west-2'
+  IAM_ROLE_ARN: 'arn:aws:iam::844815912454:role/GithubActions-Tech-Docs-Role'
 
 jobs:
   test:
@@ -27,31 +35,28 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SKIP_PROXY_PAGES: true
+  build-dev:
+    needs: test
+    uses: ./.github/workflows/build.yml
+
   deploy:
     runs-on: ubuntu-latest
-    environment: development
-    needs: test
+    needs:
+      - test
+      - build-dev
+
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v4
         with:
-          fetch-depth: 0
-      - uses: ruby/setup-ruby@v1
+          name: build-artifact
+          path: build/
+
+      - uses: aws-actions/configure-aws-credentials@v4
         with:
-          bundler-cache: true
-      - name: Build 'build' folder ready for deployment
-        run: make build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install AWS CLI
-        id: install-aws-cli
-        uses: unfor19/install-aws-cli-action@master
-        with:
-          version: 2
-      - name: Deploy
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID}}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
-          AWS_DEFAULT_REGION: ${{ vars.AWS_DEFAULT_REGION}}
+          role-to-assume: ${{ env.IAM_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Upload to S3
         run: |
           ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
 

@@ -22,9 +22,9 @@ This playbook explains how to register and invite new users to the app when usin
 4. In the left-hand menu, click **User management → Users**.
 5. Click **Create user**.
 6. Fill in the details:
-  - **Invitation message**: Tick on the ***Send an email invitation*** option.
-  - **Email address**: Enter the user’s email and tick ***Mark email address as verified***.
-  - **Temporary password**: Tick on the ***Generate a password***.
+  1. **Invitation message**: Tick on the ***Send an email invitation*** option.
+  2. **Email address**: Enter the user’s email and tick ***Mark email address as verified***.
+  3. **Temporary password**: Tick on the ***Generate a password***.
 
 7. Click **Create user**.
 
