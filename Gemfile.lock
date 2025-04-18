@@ -261,7 +261,7 @@ GEM
       mixlib-config (>= 2.2.1, < 4)
       mixlib-shellout
     memoist (0.16.2)
-    method_source (1.0.0)
+    method_source (1.1.0)
     middleman (4.5.0)
       coffee-script (~> 2.2)
       haml (>= 4.0.5)
@@ -568,7 +568,7 @@ GEM
     plek (5.0.0)
     prometheus_exporter (2.1.0)
       webrick
-    pry (0.14.2)
+    pry (0.15.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (6.0.1)
