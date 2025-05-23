@@ -18,7 +18,6 @@ Scope of user (at the time of writing):
 We maintain a private ssh key which is associated with this user in the [trade-tariff organisation secrets][trade-tariff-secrets] that workflows can
 use to gain access to the repos in the organisation.
 
-> [!TIP]
 > The user is not a maintainer and if you need additional permissions it is recommended that you use ephemeral credentials using the Github permissions DSL or move to using a PAT (personal access token) in more involved workflows.
 
 Prerequisites for managing this user:
