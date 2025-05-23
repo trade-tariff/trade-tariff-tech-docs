@@ -1,47 +1,37 @@
 - repo_name: trade-tariff-backend
   type: APIs
   team: "#trade-tariff-write"
-  sentry_url: "https://sentry.io/engine-le/tariff-backend"
-
-- repo_name: trade-tariff-testing
-  type: Testing
-  team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-frontend
   type: Frontend
-  team: "#trade-tariff-write"
-  sentry_url: "https://sentry.io/engine-le/tariff-frontend"
-
-- repo_name: trade-tariff-platform-aws-terraform
-  type: Infrastructure
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-admin
   type: Frontend
   team: "#trade-tariff-write"
-  sentry_url: "https://sentry.io/engine-le/tariff-admin"
+
+- repo_name: trade-tariff-duty-calculator
+  type: Frontend
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-platform-aws-terraform
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-platform-terraform-modules
+  type: Infrastructure
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-api-docs
+  type: Static site
+  team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-tech-docs
   type: Static site
   team: "#trade-tariff-write"
 
-- repo_name: trade-tariff-dev-hub-backend
-  type: APIs
-  team: "#trade-tariff-write"
-  sentry_url: "https://sentry.io/engine-le/tariff-dev-hub-backend"
-
-- repo_name: trade-tariff-duty-calculator
-  type: Frontend
-  team: "#trade-tariff-write"
-  sentry_url: "https://sentry.io/engine-le/tariff-duty-calculator"
-
-- repo_name: trade-tariff-dev-hub-frontend
-  type: Frontend
-  team: "#trade-tariff-write"
-  sentry_url: "https://sentry.io/engine-le/tariff-dev-hub-frontend"
-
-- repo_name: trade-tariff-platform-terraform-modules
-  type: Infrastructure
+- repo_name: trade-tariff-reporting
+  type: Static site
   team: "#trade-tariff-write"
 
 - repo_name: process-appendix-5a
@@ -52,24 +42,20 @@
   type: Utilities
   team: "#trade-tariff-write"
 
-- repo_name: trade-tariff-api-docs
-  type: Static site
-  team: "#trade-tariff-write"
-
 - repo_name: electronic-tariff-file
   type: Utilities
-  team: "#trade-tariff-write"
-
-- repo_name: trade-tariff-ci-orb
-  type: Infrastructure
   team: "#trade-tariff-write"
 
 - repo_name: trade-tariff-lambdas-database-backups
   type: Lambdas
   team: "#trade-tariff-write"
 
-- repo_name: routing-filter
-  type: Gems
+- repo_name: trade-tariff-lambdas-electronic-tariff-file-rotations
+  type: Lambdas
+  team: "#trade-tariff-write"
+
+- repo_name: trade-tariff-lambdas-fpo-search
+  type: Lambdas
   team: "#trade-tariff-write"
 
 - repo_name: download-CDS-files
@@ -88,10 +74,6 @@
   type: Utilities
   team: "#trade-tariff-write"
 
-- repo_name: ott-prototype
-  type: Prototyping
-  team: "#trade-tariff-write"
-
 - repo_name: trade-tariff-performance-testing
   type: Testing
   team: "#trade-tariff-write"
@@ -100,47 +82,10 @@
   type: Testing
   team: "#trade-tariff-write"
 
-- repo_name: trade-tariff-reporting
-  type: Static site
-  team: "#trade-tariff-write"
-
-- repo_name: preference-utilisation-analysis
-  type: Utilities
-  team: "#trade-tariff-write"
-
-- repo_name: trade-tariff-cloudwatch-synthetics-canaries
-  type: Infrastructure
-  team: "#trade-tariff-write"
-
-- repo_name: basic-python-tariff-query
-  type: Utilities
-  team: "#trade-tariff-write"
-
-- repo_name: trade-tariff-lambdas-uk-issues-mailer
-  type: Lambdas
-  team: "#trade-tariff-write"
-
-- repo_name: trade-tariff-lambdas-electronic-tariff-file-rotations
-  type: Lambdas
-  team: "#trade-tariff-write"
-
-- repo_name: deliverables-report-writer
-  type: Utilities
-  team: "#trade-tariff-write"
-
-- repo_name: trade-tariff-lambdas-fpo-search
-  type: APIs (lambda)
-  team: "#trade-tariff-write"
-  sentry_url: "https://sentry.io/engine-le/tariff-lambdas-fpo-search"
-
-- repo_name: trade-tariff-lambdas-status-checks
-  type: Lambdas
-  team: "#trade-tariff-write"
-
-- repo_name: trade-tariff-status
-  type: Static site
-  team: "#trade-tariff-write"
-
 - repo_name: trade-tariff-commodi-tea
   type: Frontend
+  team: "#trade-tariff-write"
+
+- repo_name: routing-filter
+  type: Gems
   team: "#trade-tariff-write"
