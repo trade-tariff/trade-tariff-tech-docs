@@ -4,7 +4,6 @@
 //= require govuk_publishing_components/lib/cookie-functions
 //= require govuk_publishing_components/lib/cookie-settings
 //= require govuk_publishing_components/components/cookie-banner
-//= require govuk_publishing_components/components/tabs
 //= require govuk_publishing_components/load-analytics
 //= require filter-list
 
@@ -22,7 +21,7 @@ var renderMermaid = function() {
     });
 };
 
-var devdocsModulesFind = function () {
+var devdocsModulesFind = function() {
   container = document
 
   var modules
@@ -42,7 +41,7 @@ var devdocsModulesFind = function () {
   return modulesArray
 }
 
-var devdocsModulesStart = function () {
+var devdocsModulesStart = function() {
   var GOVUK = window.GOVUK
   var modules = devdocsModulesFind()
 
@@ -67,19 +66,19 @@ var devdocsModulesStart = function () {
   }
 
   // eg selectable-table to SelectableTable
-  function camelCaseAndCapitalise (string) {
+  function camelCaseAndCapitalise(string) {
     return capitaliseFirstLetter(camelCase(string))
   }
 
   // http://stackoverflow.com/questions/6660977/convert-hyphens-to-camel-case-camelcase
-  function camelCase (string) {
-    return string.replace(/-([a-z])/g, function (g) {
+  function camelCase(string) {
+    return string.replace(/-([a-z])/g, function(g) {
       return g.charAt(1).toUpperCase()
     })
   }
 
   // http://stackoverflow.com/questions/1026069/capitalize-the-first-letter-of-string-in-javascript
-  function capitaliseFirstLetter (string) {
+  function capitaliseFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1)
   }
 }
