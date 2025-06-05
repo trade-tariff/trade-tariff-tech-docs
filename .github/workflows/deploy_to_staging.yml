@@ -2,9 +2,9 @@ name: Deploy to staging
 
 on:
   workflow_run:
-    workflows: 
+    workflows:
       - 'Deploy to development'
-    types: 
+    types:
       - completed
   workflow_dispatch:
     inputs:
