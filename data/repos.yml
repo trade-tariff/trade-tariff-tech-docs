@@ -10,10 +10,6 @@
   type: Frontend
   team: "#trade-tariff-write"
 
-- repo_name: trade-tariff-duty-calculator
-  type: Frontend
-  team: "#trade-tariff-write"
-
 - repo_name: trade-tariff-platform-aws-terraform
   type: Infrastructure
   team: "#trade-tariff-write"
@@ -74,11 +70,11 @@
   type: Utilities
   team: "#trade-tariff-write"
 
-- repo_name: trade-tariff-performance-testing
+- repo_name: trade-tariff-fpo-dev-hub-e2e
   type: Testing
   team: "#trade-tariff-write"
 
-- repo_name: trade-tariff-fpo-dev-hub-e2e
+- repo_name: trade-tariff-e2e-tests
   type: Testing
   team: "#trade-tariff-write"
 
