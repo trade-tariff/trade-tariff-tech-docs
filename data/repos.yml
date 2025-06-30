@@ -1,91 +1,87 @@
 - repo_name: trade-tariff-backend
   type: APIs
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: trade-tariff-frontend
   type: Frontend
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: trade-tariff-admin
   type: Frontend
-  team: "#trade-tariff-write"
-
-- repo_name: trade-tariff-duty-calculator
-  type: Frontend
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: trade-tariff-platform-aws-terraform
   type: Infrastructure
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-admin"
 
 - repo_name: trade-tariff-platform-terraform-modules
   type: Infrastructure
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-admin"
 
 - repo_name: trade-tariff-api-docs
   type: Static site
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: trade-tariff-tech-docs
   type: Static site
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: trade-tariff-reporting
   type: Static site
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: process-appendix-5a
   type: Utilities
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: trade-tariff-tools
   type: Utilities
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: electronic-tariff-file
   type: Utilities
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: trade-tariff-lambdas-database-backups
   type: Lambdas
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: trade-tariff-lambdas-electronic-tariff-file-rotations
   type: Lambdas
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: trade-tariff-lambdas-fpo-search
   type: Lambdas
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: download-CDS-files
   type: Utilities
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: uktt
   type: Gems
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: rules-of-origin-builder-uk
   type: Utilities
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: rules-of-origin-builder-xi
   type: Utilities
-  team: "#trade-tariff-write"
-
-- repo_name: trade-tariff-performance-testing
-  type: Testing
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: trade-tariff-fpo-dev-hub-e2e
   type: Testing
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-qa"
+
+- repo_name: trade-tariff-e2e-tests
+  type: Testing
+  team: "#trade-tariff-qa"
 
 - repo_name: trade-tariff-commodi-tea
   type: Frontend
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
 
 - repo_name: routing-filter
   type: Gems
-  team: "#trade-tariff-write"
+  team: "#trade-tariff-core"
