@@ -4,7 +4,7 @@ title: All OTT repositories
 
 # All OTT repositories
 
-OTT maintains at least <%= Repos.active.size %> repositories including apps, services, gems and documentation.
+OTT maintains at least <%= Repos.active.size %> active repositories including apps, services, gems and documentation.
 
 ## Repos by type
 
@@ -21,13 +21,3 @@ OTT maintains at least <%= Repos.active.size %> repositories including apps, ser
 <% Repos.active.group_by(&:team).sort.each do |name, repos| %>
 | # <%= name %> | <%= repos.count %> | <%= repos.map { |repo| "[#{repo.repo_name}](/repos/#{repo.repo_name}.html)" }.join(", ") %> |
 <% end %>
-
-## Reuse this data
-
-You can download this data as JSON or as CSV ([repos.json](/repos.json) and [repos.csv](/repos.csv)).
-
-In Google Spreadsheets, use the following formula to import all of the data:
-
-```
-=importData("https://docs.publishing.service.gov.uk/repos.csv")
-```
