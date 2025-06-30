@@ -244,6 +244,21 @@ Our main languages are Ruby and Node.js, so you will need to install these with 
 
 To keep up-to-date with ruby installations in each project you can follow the [ruby installation guide][ruby-installation].
 
+## 14. On-demand deployments to development
+
+The development environment is stopped and started on demand to save costs in AWS whilst preserving the value of giving developers a place
+to prove their code e2e in a way that precisely resembles a production environment in a low risk way.
+
+To deploy to development, you will need to do one of the following:
+
+- Add the label `needs-deployment` to your pull request,
+- Trigger the `Deploy to Development` workflow in the repository you want to deploy and specify your branch,
+
+The `needs-deployment` label only supports a deployment of the current application and enables validation of building, deploying and starting the application
+in a production-like environment.
+
+The `needs-full-deployment` label will trigger a full deployment of the development environment, including all applications and services that are part of the OTT and which enable successful runs of the e2e tests.
+
 [generate-release-notes]: https://github.com/trade-tariff/trade-tariff-tools/blob/main/bin/generate_release_notes.sh
 [regression-chat]: https://future-borders.slack.com/archives/C02T8JXUYE9
 [developer-chat]: https://future-borders.slack.com/archives/C01DXUP15M5
