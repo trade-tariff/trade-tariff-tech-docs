@@ -18,7 +18,7 @@ For setup instructions, see [Getting started with Preevy](https://preevy.dev/int
 
 ## Deploy a preview app
 
-Preview apps are deployed automatically when you add the `needs-preview` label to a pull request.
+Preview apps are deployed automatically when you add the `needs-preview` or `keep-preview` label to a pull request.
 
 The GitHub Actions workflow:
 
@@ -26,10 +26,11 @@ The GitHub Actions workflow:
 - Checks out the code
 - Fetches secrets from AWS Secrets Manager
 - Starts the preview app using the `preevy up` command
+- Injects environment variables via both inline `environment:` and `env_file: .env` in Docker Compose
 
 To deploy manually:
 
-1. Add the `needs-preview` label to the PR.
+1. Add `needs-preview` or `keep-preview` label to the PR.
 2. Wait for the **Preview App Up** workflow to complete.
 3. The URL for the preview app will appear in the pull request.
 
@@ -38,7 +39,7 @@ To deploy manually:
 Preview apps are automatically destroyed when:
 
 - The PR is closed
-- The `needs-preview` label is removed
+- The `needs-preview` or `keep-preview` label is removed
 
 The **Preview App Down** workflow uses the `preevy down` command to destroy the environment.
 
@@ -46,12 +47,12 @@ You can also run the **Nightly Preview Cleanup** job to destroy stale or orphane
 
 ## Clean up preview environments
 
-The cleanup workflow runs every night, or you can trigger it manually from the Actions tab.
+The cleanup workflow runs nightly from a central workflow in the [`trade-tariff-tools`](https://github.com/trade-tariff/trade-tariff-tools/blob/main/.github/workflows/preview-cleanup.yml) repo to manage preview apps across multiple services (e.g. `frontend`, `admin`, etc.).
 
 It:
 
-- Queries running preview environments via the Preevy CLI and cloud provider (AWS Lightsail)
-- Destroys environments that don’t have the exclusion word `keep` in it's branch name
+- Queries active preview environments via the Preevy CLI and cloud provider (AWS Lightsail)
+- Destroys environments whose pull requests do not have the `keep-preview` label.
 - Removes the `needs-preview` label from any matching PRs
 - Sends a Slack notification to the `#deployments` channel summarizing the cleanup results, including:
   - Whether it was a dry run
@@ -75,7 +76,7 @@ aws secretsmanager get-secret-value \
   --secret-id "${{ env.SECRET_NAME }}" \
   --query "SecretString" \
   --output text \
-  | jq -r 'to_entries[] | "\(.key)=\(.value)"' >> "$GITHUB_ENV"
+  | jq -r 'to_entries[] | "\(.key)=\(.value)"' >> .env
 
 ```
 

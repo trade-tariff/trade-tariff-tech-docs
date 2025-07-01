@@ -9,12 +9,22 @@ important: true
 
 ## Update TO_EMAILS for electronic tariff file
 
-The **TO_EMAILS** is a distribution list used to send tariff updates to which needs to be changed from time to time.<br><br>**IMPORTANT** It cannot be edited and must be deleted and re-created so before attempting this back up the current distribution list from an email already sent. Then follow these steps<br><br>
+The `TO_EMAILS` value is a distribution list used to send email notifications when electronic tariff file (ETF) changes occur.
 
-1. Go to [circle ci contexts](https://app.circleci.com/settings/organization/github/trade-tariff/contexts)
+This value is stored in **AWS Secrets Manager** under the secret name: `electronic-tariff-file-configuration` in the **Production** environment.
 
-2. Click on the context electronic-tariff-file
+## How to Update
 
-3. Remove the env var TO_EMAILS
+Only team members with Production access to AWS Secrets Manager can update this value.
 
-4. Click on “Add Environment Variable” and add a variable with the same name “TO_EMAILS” and set the value (the list of emails that will receive the notification for the ETF Changes)
+To update `TO_EMAILS`:
+
+1. Back up the current list of recipients by checking a previously sent ETF update email.
+2. Contact a team member who has access to production secrets in AWS Secrets Manager.
+3. Provide them with the updated list of email addresses.
+4. Ask them to update the `TO_EMAILS` field in the `electronic-tariff-file-configuration` secret.
+
+## ✅ Notes
+
+- Ensure all email addresses are valid and separated according to the expected format (e.g., comma-separated).
+- Confirm the update has been applied correctly by verifying the secret value or coordinating with the person who made the change.
