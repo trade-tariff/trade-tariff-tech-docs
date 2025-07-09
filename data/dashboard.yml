@@ -27,4 +27,18 @@
       sites:
         - name: Developer manuals
           url: /manual.html
-          description: The contents page of OTT's developer manuals.
+          description: The contents page of OTT's developer manuals
+
+- name: OTT manuals
+  sites:
+    - name: Developer manuals
+      url: /manual.html
+      description: The contents page of OTT's developer manuals.
+
+    - name: Add and Run Accessibility Tests
+      url: /manual/accessibility/add-and-run-accessibility-tests.html
+      description: Steps to set up and run accessibility tests using Axe and Playwright.
+
+    - name: Learn Accessibility Testing
+      url: /manual/accessibility/learn-to-accessibility-tests.html
+      description: Learning resources and practices for accessibility testing.          
