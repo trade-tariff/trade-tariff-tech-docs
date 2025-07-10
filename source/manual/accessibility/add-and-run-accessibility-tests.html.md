@@ -1,7 +1,12 @@
 ---
 title: How to Add and Run Accessibility Tests with Yarn
 description: A guide to running accessibility tests using Playwright and axe-core with Yarn, and viewing the HTML report.
+section: Accessibility
+type: learn
+layout: manual_layout
+parent: "/manual.html"
 ---
+
 
 # How to Add and Run Accessibility Tests with Yarn
 

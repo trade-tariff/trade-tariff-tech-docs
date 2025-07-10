@@ -1,7 +1,13 @@
 ---
 title: Why Accessibility Testing Matters
 description: Understand what accessibility testing is and why it's essential in modern web development.
+section: Accessibility
+type: learn
+layout: manual_layout
+parent: "/manual.html"
 ---
+
+
 
 # Why Accessibility Testing Matters
 
