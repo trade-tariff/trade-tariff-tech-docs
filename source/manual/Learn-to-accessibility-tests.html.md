@@ -1,19 +1,17 @@
 ---
+owner_slack: "#ott-core"
 title: Why Accessibility Testing Matters
-description: Understand what accessibility testing is and why it's essential in modern web development.
-section: Accessibility
+section: Testing
 type: learn
 layout: manual_layout
 parent: "/manual.html"
 ---
 
 
-
-# Why Accessibility Testing Matters
-
 ## 🌐 What is Accessibility?
 
 Accessibility ensures that digital content can be used by **everyone**, including people with:
+
 - Visual impairments
 - Hearing loss
 - Mobility limitations
@@ -36,19 +34,21 @@ Testing ensures that assistive technologies like screen readers, keyboard naviga
 ### 📈 Better UX for All
 
 Good accessibility often improves overall usability:
+
 - Clear navigation
 - Proper contrast
 - Readable content
 
 ### 🧪 Shift-Left Testing
 
-Adding automated accessibility checks to CI/CD ensures issues are caught early — reducing risk and rework.
+Adding automated accessibility checks to CI/CD ensures issues are caught early, reducing risk and rework.
 
 ---
 
 ## 🛠️ How We Test Accessibility
 
 We use:
+
 - **axe-core** — an open-source accessibility testing engine
 - **Playwright** — to run end-to-end accessibility checks across pages
 - **HTML Reports** — to view, debug, and fix issues efficiently
