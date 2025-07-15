@@ -58,9 +58,10 @@ Or to run your specific accessibility script in headed mode (if accessibility.sp
 yarn playwright test spec/javascript/accessibility/accessibility.spec.js --headed
 ```
 
+
 - **Run a single test file (optional)**:
 
-To run just one test (e.g. only login page):
+To run just one test... (e.g. only login page):
 
 ```
 yarn playwright test -g "Duty Calculator" --headed
