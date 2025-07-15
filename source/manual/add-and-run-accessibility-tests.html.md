@@ -59,6 +59,7 @@ yarn playwright test spec/javascript/accessibility/accessibility.spec.js --heade
 ```
 
 - **Run a single test file (optional)**:
+
 To run just one test (e.g. only login page):
 
 ```
