@@ -22,7 +22,7 @@ This guide explains how to run accessibility tests in your project using **Playw
 
 ## 🧪 Running Accessibility Tests Locally
 
-* **Install dependencies**:
+- **Install dependencies**:
   Run the following commands in your project root:
 
 ```
@@ -36,7 +36,7 @@ yarn playwright install
 yarn add @axe-core/playwright
    ```
 
-* **Run all accessibility tests**:
+- **Run all accessibility tests**:
 
  ```
    yarn run axxy
@@ -44,9 +44,8 @@ yarn add @axe-core/playwright
 
 This command runs all configured accessibility tests and generates a single HTML report.
 
-* **Run tests in headed mode (optional)**:
+- **Run tests in headed mode (optional)**:
 If you want to see the browser while tests run (for debugging or visual verification):
-
 
  ```
   yarn run axxy --headed
@@ -58,26 +57,25 @@ Or to run your specific accessibility script in headed mode (if accessibility.sp
 yarn playwright test spec/javascript/accessibility/accessibility.spec.js --headed
 ```
 
-* **Run a single test file (optional)**:
+- **Run a single test file (optional)**:
 To run just one test (e.g. only login page):
 
 ```
 yarn playwright test -g "Duty Calculator" --headed
  ```
 
-* **To open last HTML report run**:
+- **To open last HTML report run**:
 
  ```
   yarn playwright show-report
   ```
 
-* **View the Generated Report**:  
-   Navigate to following file in your browser:
-   
-   ```
+- **View the Generated Report**: 
+  Navigate to following file in your browser:
+  
+  ```
    dist/accessibility-report.html
    ```
-
 ---
 
 ## 📊 About the Accessibility Report
