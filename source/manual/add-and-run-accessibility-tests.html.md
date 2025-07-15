@@ -45,6 +45,7 @@ yarn run axxy
 This command runs all configured accessibility tests and generates a single HTML report.
 
 - **Run tests in headed mode (optional)**:
+
 If you want to see the browser while tests run (for debugging or visual verification):
 
 ```
