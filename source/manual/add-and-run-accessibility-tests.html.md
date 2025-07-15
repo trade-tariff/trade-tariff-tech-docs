@@ -63,17 +63,14 @@ To run just one test (e.g. only login page):
 ```
 yarn playwright test -g "Duty Calculator" --headed
  ```
-
 - **To open last HTML report run**:
-
  ```
   yarn playwright show-report
   ```
-
 - **View the Generated Report**: 
-  Navigate to following file in your browser:
-  
-  ```
+Navigate to following file in your browser:
+
+    ```
    dist/accessibility-report.html
    ```
 ---
@@ -115,7 +112,5 @@ project-root/
 │           │   └── generate-html-report.js  # Script to build the HTML report
 │           ├── accessibility.spec.js   # Main accessibility test spec
 │           └── Config.json             # Configuration file for accessibility tests
-
-
 
 > Reports are regenerated with every test run. You may choose to ignore `dist/accessibility-report.html` using `.gitignore` if not committing it.
