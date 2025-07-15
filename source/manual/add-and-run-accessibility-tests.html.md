@@ -34,26 +34,26 @@ yarn playwright install
 
 # Add axe-core for Playwright
 yarn add @axe-core/playwright
-   ```
+```
 
 - **Run all accessibility tests**:
 
- ```
-   yarn run axxy
-   ```
+```
+yarn run axxy
+```
 
 This command runs all configured accessibility tests and generates a single HTML report.
 
 - **Run tests in headed mode (optional)**:
 If you want to see the browser while tests run (for debugging or visual verification):
 
- ```
-  yarn run axxy --headed
-   ```
+```
+yarn run axxy --headed
+```
 
 Or to run your specific accessibility script in headed mode (if accessibility.spec.js is the main file):
 
- ```
+```
 yarn playwright test spec/javascript/accessibility/accessibility.spec.js --headed
 ```
 
@@ -62,17 +62,22 @@ To run just one test (e.g. only login page):
 
 ```
 yarn playwright test -g "Duty Calculator" --headed
- ```
+```
+
 - **To open last HTML report run**:
- ```
-  yarn playwright show-report
-  ```
-- **View the Generated Report**: 
+
+```
+yarn playwright show-report
+```
+
+- **View the Generated Report**:
+
 Navigate to following file in your browser:
 
-    ```
-   dist/accessibility-report.html
-   ```
+```
+dist/accessibility-report.html
+```
+
 ---
 
 ## 📊 About the Accessibility Report
@@ -80,7 +85,6 @@ Navigate to following file in your browser:
 The generated HTML report includes:
 
 - A summary of violations per tested page
-
 - Grouping by severity:
 
   - 🔴 Critical
