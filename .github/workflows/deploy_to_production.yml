@@ -9,6 +9,8 @@ on:
       - 'Deploy to staging'
     types:
       - completed
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       ref:
