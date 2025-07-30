@@ -1,9 +1,5 @@
 name: Reusable Build Workflow
 
-description: |
-  This workflow builds the 'build' folder ready for deployment.
-  It is reusable and can be called from other workflows.
-
 on:
   workflow_call:
     inputs:

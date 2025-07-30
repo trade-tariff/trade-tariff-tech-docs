@@ -2,15 +2,9 @@ name: Deploy to development
 
 on:
   push:
-    branches:
+    branches-ignore:
       - main
-  pull_request:
   workflow_dispatch:
-    inputs:
-      ref:
-        description: The branch, tag or SHA to checkout
-        default: main
-        type: string
 
 permissions:
   contents: read
@@ -22,12 +16,10 @@ env:
 
 jobs:
   test:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ inputs.ref || github.ref }}
-          show-progress: false
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
@@ -47,6 +39,7 @@ jobs:
 
     steps:
       - uses: actions/download-artifact@v4
+        if: ${{ success() }}
         with:
           name: build-artifact
           path: build/
@@ -59,5 +52,4 @@ jobs:
       - name: Upload to S3
         run: |
           ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
-
           aws s3 cp --recursive build/ s3://trade-tariff-tech-docs-${ACCOUNT_ID}/
