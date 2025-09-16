@@ -12,83 +12,90 @@
 // the modules code from govuk_publishing_components
 
 var renderMermaid = function() {
-  import("https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs")
-    .then(function(mermaid) {
-      console.log('Mermaid loaded', mermaid);
+  import("https://cdn.jsdelivr.net/npm/mermaid@11.11.0/dist/mermaid.esm.min.mjs")
+    .then(function(module) {
+      const mermaid = module.default;
+
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'default',
+        securityLevel: 'loose',
+        logLevel: 'debug'
+      });
+
+      var elements = document.querySelectorAll('pre.mermaid, div.mermaid');
+      console.log('Found Mermaid elements:', elements.length);
+
+      for (var i = 0; i < elements.length; i++) {
+        if (elements[i].hasAttribute('data-processed')) {
+          console.log('Removing data-processed from:', elements[i]);
+          elements[i].removeAttribute('data-processed');
+        }
+      }
+
+      mermaid.run({
+        querySelector: 'pre.mermaid, div.mermaid'
+      }).then(function() {
+        console.log('Mermaid diagrams rendered successfully');
+      }).catch(function(error) {
+        console.error('Error rendering Mermaid diagrams:', error);
+      });
     })
     .catch(function(error) {
       console.error('Error loading Mermaid:', error);
     });
 };
 
+window.renderMermaid = renderMermaid;
+
 var devdocsModulesFind = function() {
-  container = document
-
-  var modules
-  var moduleSelector = '[data-module]'
-
-  modules = container.querySelectorAll(moduleSelector)
-  var modulesArray = []
-  // convert nodelist of modules to array
+  var container = document;
+  var moduleSelector = '[data-module]';
+  var modules = container.querySelectorAll(moduleSelector);
+  var modulesArray = [];
   for (var i = 0; i < modules.length; i++) {
-    modulesArray.push(modules[i])
+    modulesArray.push(modules[i]);
   }
-
-  // Container could be a module too
   if (container !== document && container.getAttribute('data-module')) {
-    modulesArray.push(container)
+    modulesArray.push(container);
   }
-  return modulesArray
-}
+  return modulesArray;
+};
 
 var devdocsModulesStart = function() {
-  var GOVUK = window.GOVUK
-  var modules = devdocsModulesFind()
-
+  var GOVUK = window.GOVUK;
+  var modules = devdocsModulesFind();
   for (var i = 0, l = modules.length; i < l; i++) {
-    var element = modules[i]
-    var moduleNames = element.getAttribute('data-module').split(' ')
-
+    var element = modules[i];
+    var moduleNames = element.getAttribute('data-module').split(' ');
     for (var j = 0, k = moduleNames.length; j < k; j++) {
-      var moduleName = camelCaseAndCapitalise(moduleNames[j])
-      var started = element.getAttribute('data-' + moduleNames[j] + '-module-started')
+      var moduleName = camelCaseAndCapitalise(moduleNames[j]);
+      var started = element.getAttribute('data-' + moduleNames[j] + '-module-started');
       if (typeof GOVUK.Modules[moduleName] === 'function' && !started) {
         try {
-          var module = new GOVUK.Modules[moduleName]
-          module.start($(element))
-          element.setAttribute('data-' + moduleNames[j] + '-module-started', true)
+          var module = new GOVUK.Modules[moduleName];
+          module.start($(element));
+          element.setAttribute('data-' + moduleNames[j] + '-module-started', true);
         } catch (e) {
-          // if there's a problem with the module, catch the error to allow other modules to start
-          console.error('Error starting ' + moduleName + ' component JS: ' + e.message, window.location)
+          console.error('Error starting ' + moduleName + ' component JS: ' + e.message, window.location);
         }
       }
     }
   }
-
-  // eg selectable-table to SelectableTable
   function camelCaseAndCapitalise(string) {
-    return capitaliseFirstLetter(camelCase(string))
+    return capitaliseFirstLetter(camelCase(string));
   }
-
-  // http://stackoverflow.com/questions/6660977/convert-hyphens-to-camel-case-camelcase
   function camelCase(string) {
     return string.replace(/-([a-z])/g, function(g) {
-      return g.charAt(1).toUpperCase()
-    })
+      return g.charAt(1).toUpperCase();
+    });
   }
-
-  // http://stackoverflow.com/questions/1026069/capitalize-the-first-letter-of-string-in-javascript
   function capitaliseFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1)
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
-}
+};
 
 $(document).ready(function() {
-  devdocsModulesStart()
-})
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', renderMermaid)
-} else {
-  renderMermaid()
-}
+  devdocsModulesStart();
+  renderMermaid();
+});
