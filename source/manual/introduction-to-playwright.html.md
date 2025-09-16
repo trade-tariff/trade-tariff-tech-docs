@@ -15,10 +15,10 @@ parent: "/manual.html"
 
 Playwright enables us to:
 
-- ✅ Automate **end-to-end tests** for critical user flows
-- ✅ Run **accessibility checks** using Axe integration
-- ✅ Validate functionality across **multiple environments** (development, staging, production)
-- ✅ Ensure cross-browser compatibility and stability of our services
+- Automate **end-to-end tests** for critical user flows
+- Run **accessibility checks** using Axe integration
+- Validate functionality across **multiple environments** (development, staging, production)
+- Ensure cross-browser compatibility and stability of our services
 
 Playwright tests give developers fast, repeatable confidence that user-facing functionality works as expected.
 
