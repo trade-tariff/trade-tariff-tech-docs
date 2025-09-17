@@ -1,12 +1,12 @@
 window.GOVUK = window.GOVUK || {}
 window.GOVUK.Modules = window.GOVUK.Modules || {};
 
-(function (Modules) {
-  function FilterList ($module) {
+(function(Modules) {
+  function FilterList($module) {
     this.$module = $module
   }
 
-  FilterList.prototype.init = function () {
+  FilterList.prototype.init = function() {
     // find the input element
     this.$module.input = this.$module.nodeName === 'INPUT' ? this.$module : this.$module.querySelector('input')
     if (!this.$module.input) {
@@ -14,16 +14,16 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     }
     this.$module.form = this.$module.input.closest('form')
     if (this.$module.form) {
-      this.$module.form.addEventListener('submit', function (e) { e.preventDefault() })
+      this.$module.form.addEventListener('submit', function(e) { e.preventDefault() })
     }
 
-    this.$module.input.addEventListener('input', function () {
+    this.$module.input.addEventListener('input', function() {
       var searchTerm = this.$module.input.value
       this.filterList(searchTerm)
     }.bind(this))
   }
 
-  FilterList.prototype.filterList = function (searchTerm) {
+  FilterList.prototype.filterList = function(searchTerm) {
     var itemsToFilter = document.querySelectorAll('[data-filter-section]')
 
     for (var i = 0; i < itemsToFilter.length; i++) {
@@ -50,7 +50,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     }
   }
 
-  FilterList.prototype.showHide = function (text, searchTerm, element) {
+  FilterList.prototype.showHide = function(text, searchTerm, element) {
     if (text.includes(searchTerm.toLowerCase())) {
       element.classList.remove('filter-list-hidden')
     } else {
