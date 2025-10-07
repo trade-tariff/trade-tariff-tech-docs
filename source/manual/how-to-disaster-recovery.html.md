@@ -32,7 +32,7 @@ To deploy a missing, deleted, or failed service using GitHub Actions:
 2. Select the **Actions** tab.
 3. Under **All workflows**, select **Deploy to production**.
 4. Select **Run workflow**.
-5. Choose the branch, or enter the known working commit hash.
+5. Choose the branch.
 
 - **If Unsure, Deploy a Release:**
      1. Navigate to the **Releases** tab
@@ -44,11 +44,22 @@ To deploy a missing, deleted, or failed service using GitHub Actions:
 
 ## Database Restore
 
-⚠️ **Warning:** AWS credentials are required to perform a database restore. ⚠️
+⚠️ **Warning:** AWS credentials with a platform level of access are required to perform a database restore. ⚠️
+
+> **Note:** You can now use the [`ecs` helper script](https://github.com/trade-tariff/trade-tariff-tools/blob/main/bin/ecs) instead of creating a temporary EC2 jump box.
+> This script opens an interactive shell inside the `backend-job` ECS task (in the correct VPC and security group) and automatically shuts it down when finished.
+>
+> Example:
+>
+> ```bash
+> ./bin/ecs 'psql "${DATABASE_URL}" < tariff-merged-production.sql'
+> ```
+>
+> This method is simpler and avoids manual EC2 setup, but you can still follow the full steps below if needed.
 
 To restore a database manually, create an EC2 instance that you will use as a jump-box to perform the PostgreSQL restore:
 
-## EC2 Instance Setup
+### EC2 Instance Setup
 
 1. **Start an AWS session** in the Production account using `TariffPowerUserAccess` or `TariffAdministratorAccess`
 2. Navigate to **EC2**
@@ -77,9 +88,9 @@ To restore a database manually, create an EC2 instance that you will use as a ju
     - Under **Source**, select `trade-tariff-be-rd-production`
 15. Scroll to the bottom of the page. Select **Launch instance**
 
-## Database Security Group Configuration
+### Database Security Group Configuration
 
-16. **Configure database security group** to allow the EC2 instance access:
+16. **Configure database security group** to allow the EC2 instance access to complete the restore:
     - On the EC2 page, select **Security Groups**
     - Search for `trade-tariff-be-rd-production`. Select the security group
     - Under **Actions**, select **Edit inbound rules**
@@ -89,7 +100,7 @@ To restore a database manually, create an EC2 instance that you will use as a ju
     - Under **Description**, enter `Disaster Recovery`
     - Select **Save rules**
 
-## Connect to EC2 Instance
+### Connect to EC2 Instance
 
 17. Navigate back to **Instances**
 18. Select the ID of the instance on the Instances page
@@ -101,13 +112,13 @@ To restore a database manually, create an EC2 instance that you will use as a ju
     - **To connect using the terminal on your machine**, select **SSH client**
       - Follow the steps on this page to connect to the EC2 instance
 
-## Database Restore Process
+### Database Restore Process
 
 21. With the terminal window connected to the EC2 instance, copy and run the following command sequence:
 
     ```bash
     sudo yum update -y && sudo yum install postgresql15 -y
-    **Obtain database dump URL with credentials**
+    # Find username and password in the AWS Secrets Manager secret - 'backups-basic-auth'
     wget https://[username]:[password]@dumps.trade-tariff.service.gov.uk/tariff-merged-production.sql.gz
     gzip -dv tariff-merged-production.sql.gz
     ```
@@ -128,7 +139,7 @@ To restore a database manually, create an EC2 instance that you will use as a ju
 
 24. Monitor the database restore process
 
-## Completion and Cleanup
+### Completion and Cleanup
 
 25. Once the database restore is complete, disconnect from the EC2 instance
 26. **Clean up after the disaster recovery process**:
